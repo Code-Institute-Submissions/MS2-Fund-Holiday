@@ -57,6 +57,10 @@ As a user I would like to get the National public holidays per country per year 
     Previous selections need to be cleared first.
     Also the default option of "Choose Country" is returning "ry."
     Having completed more country selections the functiona ppears to be woring as expected. To be tested further when API calls are made.
+. Added $.getJSON function to make API call. Didn't work.
+    Jquery link in index file updated.
+    Calls made for Anguilla, Antigua and Cyprus. Console successfully showing holidays from Calendarific. Previous selection is not showing.
+    "RY", the last 2 letters in "Choose Country" is not showing.    
 
 ## Deployment
 
