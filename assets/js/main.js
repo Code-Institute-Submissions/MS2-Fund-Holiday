@@ -37,6 +37,7 @@ function getCountryHolidays() {
 let isoCode = iscde.slice(-2);
  //
 
+ // https://www.youtube.com/watch?v=InoAIgBZIEA
  $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear  + monthFormat + currentMonth + type, function(data) {
     console.log(data);
 })
