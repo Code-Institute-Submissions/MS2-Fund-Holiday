@@ -55,30 +55,56 @@ function getCountryHolidays() {
             let date = data.response.holidays[i].date.iso;
             let description = data.response.holidays[i].name;
 
-
-
             $("#tdata").append("<tr>" +
                 "<td>" + name + "</td>" +
                 "<td>" + date + "</td>" +
                 "<td>" + description + "</td>"
-
                 + "</tr>");
         }
-        console.log(iscde);
 
         let noHols = document.getElementById("tdata");
         while (noHols.rows.length < 1) {
             $("#tdata").append("<tr>" +
                 "<td>" + iscde + "</td>" +
-
                 "<td>" + "No holidays for month " + currentMonth + " " + userSystemYear + "</td>"
-
                 + "</tr>");
-
         }
+    })
 
+    // get next month if it's in the current year else January of the the following year
+      if (currentMonth < 12) {
+        $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear  + monthFormat + nextMonth + type, function(data) {
+
+                                for (let i in data.response.holidays) {
+                                    console.log(data.response.holidays[i]);
+                                        let name = data.response.holidays[i].country.name;
+                                            let date = data.response.holidays[i].date.iso;
+                                                let description = data.response.holidays[i].name;
+                                               
+                                    $("#tdata").append("<tr>"+
+                "<td>" + name +"</td>"+
+                "<td>" + date +"</td>"+
+                "<td>" + description +"</td>"           
+            +"</tr>");
+                                }
+        })  
+    } else {
+
+$.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + nextYear  + monthFormat + nextMonth + type, function(data) {
+
+                                for (let i in data.response.holidays) {
+                                    console.log(data.response.holidays[i]);
+                                        let name = data.response.holidays[i].country.name;
+                                            let date = data.response.holidays[i].date.iso;
+                                                let description = data.response.holidays[i].name;
+                                               
+                                    $("#tdata").append("<tr>"+
+                "<td>" + name +"</td>"+
+                "<td>" + date +"</td>"+
+                "<td>" + description +"</td>"
+            +"</tr>");
+                                }
+        })
     }
-
-
-    )
+    
 }
