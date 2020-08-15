@@ -62,6 +62,14 @@ As a user I would like to get the National public holidays per country per year 
     Calls made for Anguilla, Antigua and Cyprus. Console successfully showing holidays from Calendarific. Previous selection is not showing.
     "RY", the last 2 letters in "Choose Country" is not showing.    
 . Checked table headings are showing on the page after adding Bootstrap temple. Performing as expected. Formatting to be updated post logic.
+. Added Loop to add all the current months holidays to the table. Ireland returning August 3rd as expected.
+    3 holidays for Anguilla adding on to Ireland making 4 rows in table.
+    Function to be amended to clear down the table before adding the new country.
+. Added function to clear the table down before calling new country.
+    Ireland showing August 3rd as expected.
+    When Anguilla is now selected Ireland is cleared with only holidays for Anguila showing.
+    Multiple countries selected with results as expected.
+    The table appears blank when there are no holidays. User should be informed there are no holidays rather than blank.    
 ## Deployment
 
 To deploy this page to GitHub Pages from it's Github repository the following steps were taken: 
