@@ -17,8 +17,20 @@ let userSystemYear = userSystemDate.getFullYear();
 let userSystemMonth = userSystemDate.getMonth();
 //
 
+// required to convert system dates to dates for api calls. August returns 7 from the system, 8 is required to request August holidays from api.
+let currentMonth = userSystemMonth + 1;
+let nextYear = userSystemYear + 1;
+let nextMonth;
 
-console.log(userSystemDate);
+// if current month is November the next month is December. If the current Month is December the next month is January.
+if (currentMonth < 12) {
+    nextMonth = currentMonth+1;
+} else {
+    nextMonth = currentMonth - 11;
+  }
+ 
+console.log(currentMonth);
+console.log(nextMonth);
 console.log(userSystemYear);
-console.log(userSystemMonth);  
+console.log(nextYear);
 
