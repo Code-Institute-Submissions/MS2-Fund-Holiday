@@ -51,7 +51,12 @@ As a user I would like to get the National public holidays per country per year 
     console.log(nextMonth); returned 9 as expected.
     console.log(userSystemYear); returned 2020 as expected.
     console.log(nextYear); returned 2021 as expected.
-. Selected various countries from form. Showing as expected.    
+. Selected various countries from form. Showing as expected.  
+. Added getCountryHolidaysFunction. Checked that console.log(isoCode); returned the last 2 letters which it does.  
+    However if the user makes multiple choices without refreshing the page the new selection just keeps getting added on.
+    Previous selections need to be cleared first.
+    Also the default option of "Choose Country" is returning "ry."
+    Having completed more country selections the functiona ppears to be woring as expected. To be tested further when API calls are made.
 
 ## Deployment
 

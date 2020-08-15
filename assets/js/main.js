@@ -32,6 +32,12 @@ if (currentMonth < 12) {
 //
 
 function getCountryHolidays() {
+    // get ISO code freom the User selection to input to api call
   let iscde = document.getElementById("countryForm").value;
-  let isoCode = iscde.slice(-2);
+let isoCode = iscde.slice(-2);
+ //
+
+ $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear  + monthFormat + currentMonth + type, function(data) {
+    console.log(data);
+})
 }
