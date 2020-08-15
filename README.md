@@ -69,7 +69,13 @@ As a user I would like to get the National public holidays per country per year 
     Ireland showing August 3rd as expected.
     When Anguilla is now selected Ireland is cleared with only holidays for Anguila showing.
     Multiple countries selected with results as expected.
-    The table appears blank when there are no holidays. User should be informed there are no holidays rather than blank.    
+    The table appears blank when there are no holidays. User should be informed there are no holidays rather than blank.  
+. Issue resolved. Where there is no holliday the user will now get a message advising no holidays for the country in question.
+    Tested multiple countries.
+. Added code to get the following months holidays if in the current year and the next year if the following month is January. 2 issues detected.
+    . the following month sometimes comes back before the current month and therefore is appearing before the current month on the table.
+    . The message added previously to advise of no holidays in the current month to be revised and shown only if no holidays in both months.    
+
 ## Deployment
 
 To deploy this page to GitHub Pages from it's Github repository the following steps were taken: 
