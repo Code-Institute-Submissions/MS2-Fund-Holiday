@@ -41,6 +41,16 @@ As a user I would like to get the National public holidays per country per year 
 . Added variables to convert the users current date and time to format required for api calls. 2 Console.logs() processed.
     console.log(currentMonth); returned 8 - as expected.
     console.log(nextYear); returned - 2021 as expected.
+. Added variables and an "if statement" to establish what next month is for the api call.
+    Changed current month to system date + 4.
+    Console.log(currentMonth) returned 12 as expected.
+    Changed current month to system date + 5.
+    Console.log(currentMonth) returned 1 as expected.
+. Changed currentMonth back to userSystem Month + 1.
+    console.log(currentMonth); returned 8 as expected
+    console.log(nextMonth); returned 9 as expected.
+    console.log(userSystemYear); returned 2020 as expected.
+    console.log(nextYear); returned 2021 as expected.
 
 ## Deployment
 

@@ -24,13 +24,10 @@ let nextMonth;
 
 // if current month is November the next month is December. If the current Month is December the next month is January.
 if (currentMonth < 12) {
-    nextMonth = currentMonth+1;
+    nextMonth = currentMonth + 1;
 } else {
     nextMonth = currentMonth - 11;
-  }
- 
-console.log(currentMonth);
-console.log(nextMonth);
-console.log(userSystemYear);
-console.log(nextYear);
+}
+ //
+
 
