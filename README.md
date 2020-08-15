@@ -32,6 +32,22 @@ Part of my job is to agree annual fund calendars for the upcoming year with clie
 I have to disregard some days like religious holidays that show up in various countries so this can take significant time.
 As a user I would like to get the National public holidays per country per year at the click of button.
 
+## Testing
+Added and removed a colour to body background and console.log to ensure CSS and JS files linked correctly.
+
+
+## Deployment
+
+To deploy this page to GitHub Pages from it's Github repository the following steps were taken: 
+
+1. From the menu items near the top of the page, select **Settings**.
+2. Scroll down to the **GitHub Pages** section.
+3. Under **Source** click the drop-down menu labelled **None** and select **Branch: master**
+4. On selecting  Branch: master click "Save". The page is automatically refreshed, the website is now deployed. 
+5. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
+6. Your site is ready to be published at https://gerd113.github.io/MS2-Fund-Holiday/.
+
+ 
 
 
 
