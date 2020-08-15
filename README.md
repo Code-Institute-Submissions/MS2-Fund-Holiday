@@ -61,7 +61,7 @@ As a user I would like to get the National public holidays per country per year 
     Jquery link in index file updated.
     Calls made for Anguilla, Antigua and Cyprus. Console successfully showing holidays from Calendarific. Previous selection is not showing.
     "RY", the last 2 letters in "Choose Country" is not showing.    
-
+. Checked table headings are showing on the page after adding Bootstrap temple. Performing as expected. Formatting to be updated post logic.
 ## Deployment
 
 To deploy this page to GitHub Pages from it's Github repository the following steps were taken: 

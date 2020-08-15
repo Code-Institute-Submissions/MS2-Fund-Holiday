@@ -38,7 +38,23 @@ let isoCode = iscde.slice(-2);
  //
 
  // https://www.youtube.com/watch?v=InoAIgBZIEA
+ //https://www.youtube.com/watch?v=kJTAXn_xmjo
  $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear  + monthFormat + currentMonth + type, function(data) {
     console.log(data);
+    for (let i in data.response.holidays) {
+            console.log(data.response.holidays[i]);
+                let name = data.response.holidays[i].country.name;
+                    let date = data.response.holidays[i].date.iso;
+                        let description = data.response.holidays[i].name;
+                        
+            $("#tdata").append("<tr>"+
+                "<td>" + name +"</td>"+
+                "<td>" + date +"</td>"+
+                "<td>" + description +"</td>"
+            
+            +"</tr>");
+
+            
+        }
 })
 }
