@@ -74,7 +74,11 @@ As a user I would like to get the National public holidays per country per year 
     Tested multiple countries.
 . Added code to get the following months holidays if in the current year and the next year if the following month is January. 2 issues detected.
     . the following month sometimes comes back before the current month and therefore is appearing before the current month on the table.
-    . The message added previously to advise of no holidays in the current month to be revised and shown only if no holidays in both months.    
+    . The message added previously to advise of no holidays in the current month to be revised and shown only if no holidays in both months.   
+    . Both issues added to wishlist.
+. Added annual calendar page with button to run script.
+    . Tested that the function gets the annual calendar for the current year and clears the old date from the table before running.
+         
 
 ## Deployment
 

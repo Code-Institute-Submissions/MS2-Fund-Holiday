@@ -113,11 +113,11 @@ function getAnnualCountryHolidays() {
     let iscde = document.getElementById("annualCountryForm").value;
     let isoCode = iscde.slice(-2);
     
-
+            let year = document.getElementById("years").value;
 
     // https://www.youtube.com/watch?v=InoAIgBZIEA
     //https://www.youtube.com/watch?v=kJTAXn_xmjo
-    $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear + type, function (data) {
+    $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + year + type, function (data) {
         console.log(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear + type);
         console.log(data);
         // run through the reurned array and add each holiday to the table.
