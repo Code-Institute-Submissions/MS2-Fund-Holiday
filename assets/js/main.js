@@ -101,4 +101,37 @@ function getCountryHolidays() {
 }
 
 
+function getAnnualCountryHolidays() {
+    // clear the table down for new country api call
+    // adapted from: https://stackoverflow.com/questions/7271490/delete-all-rows-in-an-html-table#:~:text=getElementById(%22yourID%22).,id%20at%20table%20level%20i.e.&text=If%20you%20do%20not%20want,inside%2C%20this%20is%20working%20perfectly.
+    let clearTable = document.getElementById("annualTData");
+            while (clearTable.rows.length > 0) {
+              clearTable.deleteRow(0);
+        }
 
+    // get ISO code freom the User selection to input to api call
+    let iscde = document.getElementById("annualCountryForm").value;
+    let isoCode = iscde.slice(-2);
+    
+
+
+    // https://www.youtube.com/watch?v=InoAIgBZIEA
+    //https://www.youtube.com/watch?v=kJTAXn_xmjo
+    $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear + type, function (data) {
+        console.log(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear + type);
+        console.log(data);
+        // run through the reurned array and add each holiday to the table.
+        for (let i in data.response.holidays) {
+            console.log(data.response.holidays[i]);
+            let name = data.response.holidays[i].country.name;
+            let date = data.response.holidays[i].date.iso;
+            let description = data.response.holidays[i].name;
+
+            $("#annualTData").append("<tr>" +
+                "<td>" + name + "</td>" +
+                "<td>" + date + "</td>" +
+                "<td>" + description + "</td>"
+                + "</tr>");
+        }
+    });
+}
