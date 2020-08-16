@@ -108,18 +108,26 @@ function getAnnualCountryHolidays() {
             while (clearTable.rows.length > 0) {
               clearTable.deleteRow(0);
         }
+let iscde=" ";
+let isoCode =" ";
 
+            
     // get ISO code freom the User selection to input to api call
-    let iscde = document.getElementById("annualCountryForm").value;
-    let isoCode = iscde.slice(-2);
+     iscde = document.getElementById("annualCountryForm").value;
+     isoCode = iscde.slice(-2);
     
             let year = document.getElementById("years").value;
 
             console.log(isoCode);
             console.log(year);
 
-            if (iscde === "Choose Country" || year === "Choose Year");
-            window.alert("Please select both country and year");
+            
+            if (iscde === "Choose Country" || year === "Choose Year") {
+           return window.alert("Please choose both country and year.")
+            } else {
+                
+            }
+            
 
     // https://www.youtube.com/watch?v=InoAIgBZIEA
     //https://www.youtube.com/watch?v=kJTAXn_xmjo

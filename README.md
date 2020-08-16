@@ -85,6 +85,8 @@ As a user I would like to get the National public holidays per country per year 
     Tested when both are not selected. - Message appeared as expected.
     Tested when only country is selected. - Message appeared as expected.   
     Tested when only year is selected. - Message appeared as expected.
+    Issue detected. When one or other or both of year or country is missed the warning is given. The warning will appear again when corrected but the calendar will still run.
+    Issue resolved. Else added to the if statement to do nothing if the statement is false. When both are selected afetr an initial error the message will not now appear twice.
 
 ## Deployment
 
