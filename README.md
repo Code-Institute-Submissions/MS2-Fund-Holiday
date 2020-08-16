@@ -77,8 +77,14 @@ As a user I would like to get the National public holidays per country per year 
     . The message added previously to advise of no holidays in the current month to be revised and shown only if no holidays in both months.   
     . Both issues added to wishlist.
 . Added annual calendar page with button to run script.
-    . Tested that the function gets the annual calendar for the current year and clears the old date from the table before running.
-         
+    . Tested that the function - getAnnualCountryHolidays() gets the annual calendar for the current year and clears the old date from the table before running.
+. Added the requirement that the user chooses the year the calendar is required for.
+    Tested for a number of countries for different years ran and cleared the table down when running again.
+    User should be notified of the requirement to choose both county and year before clicking the button.
+. Added an if statement to annual calendar to inform the user that both country and year must be selected to get the calendar.
+    Tested when both are not selected. - Message appeared as expected.
+    Tested when only country is selected. - Message appeared as expected.   
+    Tested when only year is selected. - Message appeared as expected.
 
 ## Deployment
 

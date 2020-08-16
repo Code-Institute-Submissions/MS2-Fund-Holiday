@@ -115,10 +115,15 @@ function getAnnualCountryHolidays() {
     
             let year = document.getElementById("years").value;
 
+            console.log(isoCode);
+            console.log(year);
+
+            if (iscde === "Choose Country" || year === "Choose Year");
+            window.alert("Please select both country and year");
+
     // https://www.youtube.com/watch?v=InoAIgBZIEA
     //https://www.youtube.com/watch?v=kJTAXn_xmjo
     $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + year + type, function (data) {
-        console.log(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear + type);
         console.log(data);
         // run through the reurned array and add each holiday to the table.
         for (let i in data.response.holidays) {
