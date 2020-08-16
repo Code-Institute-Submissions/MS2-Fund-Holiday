@@ -23,16 +23,14 @@
 		<button class="btn btn-primary" onclick="watchlistFunction()">Run Watchlist</button>
 	</a>
 
-	
-
 	<!-- Bootstrap Jumbotron -->
 	<div class="jumbotron">
 		<!-- Bootstrap FORM -->
 		<form id="searchForm">
 
-			<h1 class="display-4">Choose your country!</h1>
-			<select class="form-control" id="countryForm"  placeholder="Choose Country" onchange="getCountryHolidays()">
-        <option>Choose Country</option>
+			<h1 class="display-4">Choose one country</h1>
+			<select class="form-control" id="countryForm"  onchange="getCountryHolidays()">
+        <option>Click to choose</option>
         <!-- https://calendarific.com/supported-countries -->
       <option>Afghanistan      AF</option>
 <option>Åland Islands      AX</option>
@@ -290,9 +288,9 @@
 		</form>
 <form id="searchFormB">
 
-			<h1 class="display-4">Choose watchlist countries</h1>
+			<h1 class="display-4">Choose multiple countries</h1>
 			<select multiple class="form-control" id="watchlistForm" >
-        <option>Choose Country</option>
+        
         <!-- https://calendarific.com/supported-countries -->
 <option>Ireland      IE</option>
 <option>United States of America      US</option>
@@ -378,14 +376,12 @@
 <option>Faroe Islands      FO</option>
 <option>Fiji      FJ</option>
 <option>Finland      FI</option>
-
 <option>French Guiana      GF</option>
 <option>French Polynesia      PF</option>
 <option>French Southern Territories      TF</option>
 <option>Gabon      GA</option>
 <option>Gambia      GM</option>
 <option>Georgia      GE</option>
-
 <option>Ghana      GH</option>
 <option>Gibraltar      GI</option>
 <option>Greece      GR</option>
@@ -409,12 +405,10 @@
 <option>Indonesia      ID</option>
 <option>Iran (Islamic Republic of)      IR</option>
 <option>Iraq      IQ</option>
-
 <option>Isle of Man      IM</option>
 <option>Israel      IL</option>
 <option>Italy      IT</option>
 <option>Jamaica      JM</option>
-
 <option>Jersey      JE</option>
 <option>Jordan      JO</option>
 <option>Kazakhstan      KZ</option>
@@ -432,7 +426,6 @@
 <option>Libya      LY</option>
 <option>Liechtenstein      LI</option>
 <option>Lithuania      LT</option>
-
 <option>Macao      MO</option>
 <option>Madagascar      MG</option>
 <option>Malawi      MW</option>
@@ -517,7 +510,6 @@
 <option>Suriname      SR</option>
 <option>Svalbard and Jan Mayen      SJ</option>
 <option>Sweden      SE</option>
-
 <option>Syrian Arab Republic      SY</option>
 <option>Taiwan, Province of China      TW</option>
 <option>Tajikistan      TJ</option>
@@ -536,9 +528,7 @@
 <option>Uganda      UG</option>
 <option>Ukraine      UA</option>
 <option>United Arab Emirates      AE</option>
-
 <option>United States Minor Outlying Islands      UM</option>
-
 <option>Uruguay      UY</option>
 <option>Uzbekistan      UZ</option>
 <option>Vanuatu      VU</option>
@@ -550,14 +540,9 @@
 <option>Western Sahara      EH</option>
 <option>Yemen      YE</option>
 <option>Zambia      ZM</option>
-<option>Zimbabwe      ZW</option>
-
-
-      
+<option>Zimbabwe      ZW</option>    
     </select>
 		</form>
-
-
 
 	</div>
 	<!-- Bootstrap Table -->
