@@ -105,29 +105,29 @@ function getAnnualCountryHolidays() {
     // clear the table down for new country api call
     // adapted from: https://stackoverflow.com/questions/7271490/delete-all-rows-in-an-html-table#:~:text=getElementById(%22yourID%22).,id%20at%20table%20level%20i.e.&text=If%20you%20do%20not%20want,inside%2C%20this%20is%20working%20perfectly.
     let clearTable = document.getElementById("annualTData");
-            while (clearTable.rows.length > 0) {
-              clearTable.deleteRow(0);
-        }
-let iscde=" ";
-let isoCode =" ";
+    while (clearTable.rows.length > 0) {
+        clearTable.deleteRow(0);
+    }
+    let iscde = " ";
+    let isoCode = " ";
 
-            
+
     // get ISO code freom the User selection to input to api call
-     iscde = document.getElementById("annualCountryForm").value;
-     isoCode = iscde.slice(-2);
-    
-            let year = document.getElementById("years").value;
+    iscde = document.getElementById("annualCountryForm").value;
+    isoCode = iscde.slice(-2);
 
-            console.log(isoCode);
-            console.log(year);
+    let year = document.getElementById("years").value;
 
-            
-            if (iscde === "Choose Country" || year === "Choose Year") {
-           return window.alert("Please choose both country and year.")
-            } else {
-                
-            }
-            
+    console.log(isoCode);
+    console.log(year);
+
+
+    if (iscde === "Choose Country" || year === "Choose Year") {
+        return window.alert("Please choose both country and year.")
+    } else {
+
+    }
+
 
     // https://www.youtube.com/watch?v=InoAIgBZIEA
     //https://www.youtube.com/watch?v=kJTAXn_xmjo
@@ -148,3 +148,77 @@ let isoCode =" ";
         }
     });
 }
+
+//watchlist
+function watchlistFunction() {
+    let clearTable = document.getElementById("tdata");
+    while (clearTable.rows.length > 0) {
+        clearTable.deleteRow(0);
+    }
+
+let watchlistArray = ["ie", "uk","us"]
+
+for (let z =0; z < watchlistArray.length; z++){
+$.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + userSystemYear  + monthFormat + currentMonth + type, function(data) {
+console.log(data);
+for (let i in data.response.holidays) {
+            console.log(data.response.holidays[i]);
+                let name = data.response.holidays[i].country.name;
+                    let date = data.response.holidays[i].date.iso;
+                        let description = data.response.holidays[i].name;
+                        
+            $("#tdata").append("<tr>"+
+                "<td>" + name +"</td>"+
+                "<td>" + date +"</td>"+
+                "<td>" + description +"</td>"
+            
+            +"</tr>");
+}
+})
+if (currentMonth < 12) {
+        $.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + userSystemYear  + monthFormat + nextMonth + type, function(data) {
+
+                                for (let i in data.response.holidays) {
+                                    console.log(data.response.holidays[i]);
+                                        let name = data.response.holidays[i].country.name;
+                                            let date = data.response.holidays[i].date.iso;
+                                                let description = data.response.holidays[i].name;
+                                               
+                                    $("#tdata").append("<tr>"+
+                "<td>" + name +"</td>"+
+                "<td>" + date +"</td>"+
+                "<td>" + description +"</td>"
+            
+            +"</tr>");
+                                }
+        })
+    } else {
+$.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + nextYear  + monthFormat + nextMonth + type, function(data) {
+
+                                for (let i in data.response.holidays) {
+                                    console.log(data.response.holidays[i]);
+                                        let name = data.response.holidays[i].country.name;
+                                            let date = data.response.holidays[i].date.iso;
+                                                let description = data.response.holidays[i].name;
+                                               //let holidayDescription= data.response.holidays[i].description;
+                                    $("#tdata").append("<tr>"+
+                "<td>" + name +"</td>"+
+                "<td>" + date +"</td>"+
+                "<td>" + description +"</td>"
+            
+            +"</tr>");
+
+                                    $(document).ready(function() {
+                                            $("#tdata").dataTable();
+
+                                    });
+
+                                }
+        })
+
+
+
+
+
+    }
+}}
