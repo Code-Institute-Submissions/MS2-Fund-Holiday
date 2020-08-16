@@ -87,6 +87,12 @@ As a user I would like to get the National public holidays per country per year 
     Tested when only year is selected. - Message appeared as expected.
     Issue detected. When one or other or both of year or country is missed the warning is given. The warning will appear again when corrected but the calendar will still run.
     Issue resolved. Else added to the if statement to do nothing if the statement is false. When both are selected afetr an initial error the message will not now appear twice.
+. Added a watchlist function to allow the user show upcoming holidays for multiple countries at the same time. Made an empty variable and added "add and remove buttons."
+    The 2 letter iso country was set up to be input from the user which required validation. The remove function was also removing the unintended country.
+    Upon researching I decided it was much cleaner to add a bootstrap multiple select form to allow the users choose multiple countries and extract the ISO code from the selections.
+    Moved the most common cuntries to the top of the list to make it easier for the user.
+    Tested the Watchlist function and is running as expected. If ran twice the results from the first run are cleared and the results from the second run shows.   
+    Wishlist - Order the table by date rather thatn country. Return a message in the table to the user if there are no holidays for a selected country. 
 
 ## Deployment
 
