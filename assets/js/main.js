@@ -380,3 +380,163 @@ if (userSystemMonth < 11) {
   return n;
   
 }
+//Polygon Funds
+function polygonFunction() {
+
+    let clearTable = document.getElementById("tdata");
+    while (clearTable.rows.length > 0) {
+        clearTable.deleteRow(0);
+    }
+
+    let polygonFunds = ["IE", "GB", "US", "JP"];
+    let polygonFundsCountries = ["Ireland", "United Kingdom", "United States", "Japan"];
+
+    for (let z = 0; z < polygonFunds.length; z++) {
+
+        $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
+            console.log(data);
+            //q is a counter variable. If there is a holiday it will increment by 1. If it's zero after the api call user will get a message that there are no holidays for the month in the table.
+            let q = 0;
+
+            for (let i in data.response.holidays) {
+                console.log(data.response.holidays[i]);
+                let name = data.response.holidays[i].country.name;
+                let date = data.response.holidays[i].date.iso;
+                let description = data.response.holidays[i].name;
+
+if(name==="Ireland"){
+ noOfFunds = irishFunds.length;
+} else if (name === "Japan"){
+    noOfFunds = japanFunds.length;
+} else if (name === "United States"){
+    noOfFunds = usFunds.length;
+} else if (name === "United Kingdom"){
+    noOfFunds = ukFunds.length;
+} else {
+    noOfFunds = 0;
+}
+
+
+
+                $("#tdata").append("<tr>" +
+                    "<td>" + name + "</td>" +
+                    "<td>" + date + "</td>" +
+                    "<td>" + description + "</td>" +
+                    "<td>" + noOfFunds + "</td>" 
+                    + "</tr>");
+                if (document.getElementById("tdata") == " ") {
+
+                } else {
+                    q = q + 1;
+                }
+            }
+            if (q < 1) {
+                $("#tdata").append("<tr>" +
+                    "<td>" + polygonFundsCountries[z] + "</td>" +
+                    "<td>" + " - " + "</td>" +
+                    "<td>" + "No holidays for " + thisMonthsName() + "</td>"
+                    + "</tr>");
+            }
+        })
+
+        if (currentMonth < 12) {
+            $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + userSystemYear + monthFormat + nextMonth + type, function (data) {
+                q = 0;
+                for (let i in data.response.holidays) {
+                    console.log(data.response.holidays[i]);
+                    let name = data.response.holidays[i].country.name;
+                    let date = data.response.holidays[i].date.iso;
+                    let description = data.response.holidays[i].name;
+
+if(name==="Ireland"){
+ noOfFunds = irishFunds.length;
+} else if (name === "Japan"){
+    noOfFunds = japanFunds.length;
+} else if (name === "United States"){
+    noOfFunds = usFunds.length;
+} else if (name === "United Kingdom"){
+    noOfFunds = ukFunds.length;
+} else {
+    noOfFunds = 0;
+}
+
+                    $("#tdata").append("<tr>" +
+                        "<td>" + name + "</td>" +
+                        "<td>" + date + "</td>" +
+                        "<td>" + description + "</td>"+
+"<td>" + noOfFunds + "</td>" 
+                        + "</tr>");
+                    if (document.getElementById("tdata") == " ") {
+
+                    } else {
+                        q = q + 1;
+
+                    }
+                }
+                if (q < 1) {
+                    $("#tdata").append("<tr>" +
+                        "<td>" + polygonFundsCountries[z] + "</td>" +
+                        "<td>" + " - " + "</td>" +
+                        "<td>" + "No holidays for " + nextMonthName() + "</td>"
+                        + "</tr>");
+                }
+
+
+            })
+        } else {
+            $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + nextYear + monthFormat + nextMonth + type, function (data) {
+                q = 0;
+                for (let i in data.response.holidays) {
+                    console.log(data.response.holidays[i]);
+                    let name = data.response.holidays[i].country.name;
+                    let date = data.response.holidays[i].date.iso;
+                    let description = data.response.holidays[i].name;
+                    
+if(name==="Ireland"){
+ noOfFunds = irishFunds.length;
+} else if (name === "Japan"){
+    noOfFunds = japanFunds.length;
+} else if (name === "United States"){
+    noOfFunds = usFunds.length;
+} else if (name === "United Kingdom"){
+    noOfFunds = ukFunds.length;
+} else {
+    noOfFunds = 0;
+}
+
+
+                    $("#tdata").append("<tr>" +
+                        "<td>" + name + "</td>" +
+                        "<td>" + date + "</td>" +
+                        "<td>" + description + "</td>" +
+                        "<td>" + noOfFunds + "</td>" 
+                        + "</tr>");
+
+                    if (document.getElementById("tdata") == " ") {
+
+                    } else {
+                        q = q + 1;
+                        ;
+
+                    }
+
+
+
+                }
+                if (q < 1) {
+                    $("#tdata").append("<tr>" +
+                        "<td>" + polygonFundsCountries[z] + "</td>" +
+                        "<td>" + " - " + "</td>" +
+                        "<td>" + "No holidays for " + + nextMonthName() + "</td>"
+                        + "</tr>");
+
+                }
+
+                
+    })
+
+
+            
+
+
+        }}}
