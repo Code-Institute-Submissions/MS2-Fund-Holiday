@@ -17,7 +17,7 @@ let userSystemDate = new Date();
 let userSystemYear = userSystemDate.getFullYear();
 let userSystemMonth = userSystemDate.getMonth();
 //
-
+console.log(userSystemMonth);
 // required to convert system dates to dates for api calls. August returns 7 from the system, 8 is required to request August holidays from api.
 let currentMonth = userSystemMonth + 1;
 let nextYear = userSystemYear + 1;
@@ -255,7 +255,7 @@ function watchlistFunction() {
                 $("#tdata").append("<tr>" +
                     "<td>" + watchlist[z] + "</td>" +
 
-                    "<td>" + "No holidays for month " + currentMonth + "</td>"
+                    "<td>" + "No holidays for " + thisMonthsName() + "</td>"
                     + "</tr>");
             }
         })
@@ -279,14 +279,14 @@ function watchlistFunction() {
 
                     } else {
                         q = q + 1;
-                        console.log(q);
+                        
                     }
                 }
                 if (q < 1) {
                     $("#tdata").append("<tr>" +
                         "<td>" + watchlist[z] + "</td>" +
 
-                        "<td>" + "No holidays for month " + nextMonth + "</td>"
+                        "<td>" + "No holidays for " + nextMonthName() + "</td>"
                         + "</tr>");
                 }
 
@@ -312,7 +312,7 @@ function watchlistFunction() {
 
                     } else {
                         q = q + 1;
-                        console.log(q);
+                        ;
 
                     }
 
@@ -323,7 +323,7 @@ function watchlistFunction() {
                     $("#tdata").append("<tr>" +
                         "<td>" + watchlist[z] + "</td>" +
 
-                        "<td>" + "No holidays for month " + nextMonth + "</td>"
+                        "<td>" + "No holidays for " + + nextMonthName() + "</td>"
                         + "</tr>");
 
                 }
@@ -333,3 +333,50 @@ function watchlistFunction() {
     }
 }
 
+// code adapted from W3 schools. https://www.w3schools.com/jsref/jsref_getmonth.asp
+function thisMonthsName(mnth) {
+  var month = new Array();
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+
+  mnth = userSystemMonth
+  var n = month[mnth];
+  return n;
+}
+
+// code adapted from W3 schools. https://www.w3schools.com/jsref/jsref_getmonth.asp
+function nextMonthName(nxtMnth) {
+  var month = new Array();
+  month[0] = "January";
+  month[1] = "February";
+  month[2] = "March";
+  month[3] = "April";
+  month[4] = "May";
+  month[5] = "June";
+  month[6] = "July";
+  month[7] = "August";
+  month[8] = "September";
+  month[9] = "October";
+  month[10] = "November";
+  month[11] = "December";
+
+if (userSystemMonth < 11) {
+  nxtMnth = userSystemMonth + 1;
+} else {
+    nxtMnth = userSystemMonth - 11;
+}
+  var n = month[nxtMnth];
+  
+  return n;
+  
+}

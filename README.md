@@ -93,8 +93,13 @@ As a user I would like to get the National public holidays per country per year 
     Moved the most common cuntries to the top of the list to make it easier for the user.
     Tested the Watchlist function and is running as expected. If ran twice the results from the first run are cleared and the results from the second run shows.   
     Wishlist - Order the table by date rather thatn country. Return a message in the table to the user if there are no holidays for a selected country. 
-. Added a conter variable (q) to function getCountryHolidays(). The user will now see a message in the table if there are no holidays in the current month or next month or both.
-    Multiple countries tested and results are as expected.    
+. Added a counter variable (q) to function getCountryHolidays(). The user will now see a message in the table if there are no holidays in the current month or next month or both.
+    Multiple countries tested and results are as expected.   
+. Added the counter variable (q) to function getCountryHolidays(). The user will now see a message in the table if there are no holidays in the current month or next month or both.
+    Multiple countries tested and results are as expected.  
+. Updated the message the user will get if there are no holidays in a month. Previously it would be no holidays for month 9, now it's no holidays for September.
+    Upon testing giving unexpected results for next months name. If statement updated to correct.    
+
 
 ## Deployment
 
