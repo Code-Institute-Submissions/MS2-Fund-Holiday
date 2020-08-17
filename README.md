@@ -98,9 +98,13 @@ As a user I would like to get the National public holidays per country per year 
 . Added the counter variable (q) to function getCountryHolidays(). The user will now see a message in the table if there are no holidays in the current month or next month or both.
     Multiple countries tested and results are as expected.  
 . Updated the message the user will get if there are no holidays in a month. Previously it would be no holidays for month 9, now it's no holidays for September.
-    Upon testing giving unexpected results for next months name. If statement updated to correct.    
-
-
+    Upon testing giving unexpected results for next months name. If statement updated to correct.  
+. Added a group function to run all the countries whose holidays we follow for funds with one click.
+    .Improved formatting by adding a - to the date columns when no holidays and moving the comment to the description column.
+    . Numerous countries tested and all returning expected number of funds. 
+    . Where we don't have funds but there are holidays the impacted funds show as zero, where there are no holidays impacted funds is blank.
+    . Having tested numerous times I've deciced to remove one of the selection boxes as I've been using the multiple selection box for everything as the countries we need most apear at the top and I believe having only 1 option will improve the UX.
+    
 ## Deployment
 
 To deploy this page to GitHub Pages from it's Github repository the following steps were taken: 
