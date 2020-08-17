@@ -8,8 +8,6 @@
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootswatch/4.5.0/sandstone/bootstrap.min.css">
 	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
 	<link rel="stylesheet" href="assets/css/style.css">
-
-
 	<title>Fund Holiday</title>
 </head>
 
@@ -25,282 +23,284 @@
 
 
 
-    <a>
+	<a>
 		<button class="btn btn-primary" onclick="polygonFunction()">Polygon Funds</button>
 	</a>
 
 	<!-- Bootstrap Jumbotron -->
 	<div class="jumbotron">
-		<!-- Bootstrap FORM -->
-		
-<form id="searchFormB">
+        <div class="container">
 
-			<h1 class="display-4">Choose multiple countries</h1>
+		    <!-- Bootstrap FORM -->
+
+		<form id="searchFormB">
+
+			<h1 class="display-4">Choose country(s)</h1>
 			<select multiple class="form-control" id="watchlistForm" >
-        
-        <!-- https://calendarific.com/supported-countries -->
-    <option>--Reset--</option>    
-<option>Ireland      IE</option>
-<option>United States of America      US</option>
-<option>United Kingdom GB</option>
-<option>Japan      JP</option>
-<option>Luxembourg      LU</option>
-<option>France      FR</option>
-<option>Germany      DE</option>
-<option>Switzerland      CH</option>
-      <option>Afghanistan      AF</option>
-<option>Åland Islands      AX</option>
-<option>Albania      AL</option>
-<option>Algeria      DZ</option>
-<option>American Samoa      AS</option>
-<option>Andorra      AD</option>
-<option>Angola      AO</option>
-<option>Anguilla      AI</option>
-<option>Antarctica      AQ</option>
-<option>Antigua and Barbuda      AG</option>
-<option>Argentina      AR</option>
-<option>Armenia      AM</option>
-<option>Aruba      AW</option>
-<option>Australia      AU</option>
-<option>Austria      AT</option>
-<option>Azerbaijan      AZ</option>
-<option>Bahamas      BS</option>
-<option>Bahrain      BH</option>
-<option>Bangladesh      BD</option>
-<option>Barbados      BB</option>
-<option>Belarus      BY</option>
-<option>Belgium      BE</option>
-<option>Belize      BZ</option>
-<option>Benin      BJ</option>
-<option>Bermuda      BM</option>
-<option>Bhutan      BT</option>
-<option>Bolivia (Plurinational State of)      BO</option>
-<option>Bonaire, Sint Eustatius and Saba      BQ</option>
-<option>Bosnia and Herzegovina      BA</option>
-<option>Botswana      BW</option>
-<option>Bouvet Island      BV</option>
-<option>Brazil      BR</option>
-<option>British Indian Ocean Territory      IO</option>
-<option>Brunei Darussalam      BN</option>
-<option>Bulgaria      BG</option>
-<option>Burkina Faso      BF</option>
-<option>Burundi      BI</option>
-<option>Cabo Verde      CV</option>
-<option>Cambodia      KH</option>
-<option>Cameroon      CM</option>
-<option>Canada      CA</option>
-<option>Cayman Islands      KY</option>
-<option>Central African Republic      CF</option>
-<option>Chad      TD</option>
-<option>Chile      CL</option>
-<option>China      CN</option>
-<option>Christmas Island      CX</option>
-<option>Cocos (Keeling) Islands      CC</option>
-<option>Colombia      CO</option>
-<option>Comoros      KM</option>
-<option>Congo      CG</option>
-<option>Congo, Democratic Republic of the      CD</option>
-<option>Cook Islands      CK</option>
-<option>Costa Rica      CR</option>
-<option>Côte d'Ivoire      CI</option>
-<option>Croatia      HR</option>
-<option>Cuba      CU</option>
-<option>Curaçao      CW</option>
-<option>Cyprus      CY</option>
-<option>Czechia      CZ</option>
-<option>Denmark      DK</option>
-<option>Djibouti      DJ</option>
-<option>Dominica      DM</option>
-<option>Dominican Republic      DO</option>
-<option>Ecuador      EC</option>
-<option>Egypt      EG</option>
-<option>El Salvador      SV</option>
-<option>Equatorial Guinea      GQ</option>
-<option>Eritrea      ER</option>
-<option>Estonia      EE</option>
-<option>Eswatini      SZ</option>
-<option>Ethiopia      ET</option>
-<option>Falkland Islands (Malvinas)      FK</option>
-<option>Faroe Islands      FO</option>
-<option>Fiji      FJ</option>
-<option>Finland      FI</option>
-<option>French Guiana      GF</option>
-<option>French Polynesia      PF</option>
-<option>French Southern Territories      TF</option>
-<option>Gabon      GA</option>
-<option>Gambia      GM</option>
-<option>Georgia      GE</option>
-<option>Ghana      GH</option>
-<option>Gibraltar      GI</option>
-<option>Greece      GR</option>
-<option>Greenland      GL</option>
-<option>Grenada      GD</option>
-<option>Guadeloupe      GP</option>
-<option>Guam      GU</option>
-<option>Guatemala      GT</option>
-<option>Guernsey      GG</option>
-<option>Guinea      GN</option>
-<option>Guinea-Bissau      GW</option>
-<option>Guyana      GY</option>
-<option>Haiti      HT</option>
-<option>Heard Island and McDonald Islands      HM</option>
-<option>Holy See      VA</option>
-<option>Honduras      HN</option>
-<option>Hong Kong      HK</option>
-<option>Hungary      HU</option>
-<option>Iceland      IS</option>
-<option>India      IN</option>
-<option>Indonesia      ID</option>
-<option>Iran (Islamic Republic of)      IR</option>
-<option>Iraq      IQ</option>
-<option>Isle of Man      IM</option>
-<option>Israel      IL</option>
-<option>Italy      IT</option>
-<option>Jamaica      JM</option>
-<option>Jersey      JE</option>
-<option>Jordan      JO</option>
-<option>Kazakhstan      KZ</option>
-<option>Kenya      KE</option>
-<option>Kiribati      KI</option>
-<option>Korea (Democratic People's Republic of)      KP</option>
-<option>Korea, Republic of      KR</option>
-<option>Kuwait      KW</option>
-<option>Kyrgyzstan      KG</option>
-<option>Lao People's Democratic Republic      LA</option>
-<option>Latvia      LV</option>
-<option>Lebanon      LB</option>
-<option>Lesotho      LS</option>
-<option>Liberia      LR</option>
-<option>Libya      LY</option>
-<option>Liechtenstein      LI</option>
-<option>Lithuania      LT</option>
-<option>Macao      MO</option>
-<option>Madagascar      MG</option>
-<option>Malawi      MW</option>
-<option>Malaysia      MY</option>
-<option>Maldives      MV</option>
-<option>Mali      ML</option>
-<option>Malta      MT</option>
-<option>Marshall Islands      MH</option>
-<option>Martinique      MQ</option>
-<option>Mauritania      MR</option>
-<option>Mauritius      MU</option>
-<option>Mayotte      YT</option>
-<option>Mexico      MX</option>
-<option>Micronesia (Federated States of)      FM</option>
-<option>Moldova, Republic of      MD</option>
-<option>Monaco      MC</option>
-<option>Mongolia      MN</option>
-<option>Montenegro      ME</option>
-<option>Montserrat      MS</option>
-<option>Morocco      MA</option>
-<option>Mozambique      MZ</option>
-<option>Myanmar      MM</option>
-<option>Namibia      NA</option>
-<option>Nauru      NR</option>
-<option>Nepal      NP</option>
-<option>Netherlands      NL</option>
-<option>New Caledonia      NC</option>
-<option>New Zealand      NZ</option>
-<option>Nicaragua      NI</option>
-<option>Niger      NE</option>
-<option>Nigeria      NG</option>
-<option>Niue      NU</option>
-<option>Norfolk Island      NF</option>
-<option>North Macedonia      MK</option>
-<option>Northern Mariana Islands      MP</option>
-<option>Norway      NO</option>
-<option>Oman      OM</option>
-<option>Pakistan      PK</option>
-<option>Palau      PW</option>
-<option>Palestine, State of      PS</option>
-<option>Panama      PA</option>
-<option>Papua New Guinea      PG</option>
-<option>Paraguay      PY</option>
-<option>Peru      PE</option>
-<option>Philippines      PH</option>
-<option>Pitcairn      PN</option>
-<option>Poland      PL</option>
-<option>Portugal      PT</option>
-<option>Puerto Rico      PR</option>
-<option>Qatar      QA</option>
-<option>Réunion      RE</option>
-<option>Romania      RO</option>
-<option>Russian Federation      RU</option>
-<option>Rwanda      RW</option>
-<option>Saint Barthélemy      BL</option>
-<option>Saint Helena, Ascension and Tristan da Cunha      SH</option>
-<option>Saint Kitts and Nevis      KN</option>
-<option>Saint Lucia      LC</option>
-<option>Saint Martin (French part)      MF</option>
-<option>Saint Pierre and Miquelon      PM</option>
-<option>Saint Vincent and the Grenadines      VC</option>
-<option>Samoa      WS</option>
-<option>San Marino      SM</option>
-<option>Sao Tome and Principe      ST</option>
-<option>Saudi Arabia      SA</option>
-<option>Senegal      SN</option>
-<option>Serbia      RS</option>
-<option>Seychelles      SC</option>
-<option>Sierra Leone      SL</option>
-<option>Singapore      SG</option>
-<option>Sint Maarten (Dutch part)      SX</option>
-<option>Slovakia      SK</option>
-<option>Slovenia      SI</option>
-<option>Solomon Islands      SB</option>
-<option>Somalia      SO</option>
-<option>South Africa      ZA</option>
-<option>South Georgia and the South Sandwich Islands      GS</option>
-<option>South Sudan      SS</option>
-<option>Spain      ES</option>
-<option>Sri Lanka      LK</option>
-<option>Sudan      SD</option>
-<option>Suriname      SR</option>
-<option>Svalbard and Jan Mayen      SJ</option>
-<option>Sweden      SE</option>
-<option>Syrian Arab Republic      SY</option>
-<option>Taiwan, Province of China      TW</option>
-<option>Tajikistan      TJ</option>
-<option>Tanzania, United Republic of      TZ</option>
-<option>Thailand      TH</option>
-<option>Timor-Leste      TL</option>
-<option>Togo      TG</option>
-<option>Tokelau      TK</option>
-<option>Tonga      TO</option>
-<option>Trinidad and Tobago      TT</option>
-<option>Tunisia      TN</option>
-<option>Turkey      TR</option>
-<option>Turkmenistan      TM</option>
-<option>Turks and Caicos Islands      TC</option>
-<option>Tuvalu      TV</option>
-<option>Uganda      UG</option>
-<option>Ukraine      UA</option>
-<option>United Arab Emirates      AE</option>
-<option>United States Minor Outlying Islands      UM</option>
-<option>Uruguay      UY</option>
-<option>Uzbekistan      UZ</option>
-<option>Vanuatu      VU</option>
-<option>Venezuela (Bolivarian Republic of)      VE</option>
-<option>Viet Nam      VN</option>
-<option>Virgin Islands (British)      VG</option>
-<option>Virgin Islands (U.S.)      VI</option>
-<option>Wallis and Futuna      WF</option>
-<option>Western Sahara      EH</option>
-<option>Yemen      YE</option>
-<option>Zambia      ZM</option>
-<option>Zimbabwe      ZW</option>    
-    </select>
-		</form>
 
+        <!-- https://calendarific.com/supported-countries -->
+                                                        <option>--Reset--</option>    
+                                                    <option>Ireland      IE</option>
+                                                    <option>United States of America      US</option>
+                                                    <option>United Kingdom GB</option>
+                                                    <option>Japan      JP</option>
+                                                    <option>Luxembourg      LU</option>
+                                                    <option>France      FR</option>
+                                                    <option>Germany      DE</option>
+                                                    <option>Switzerland      CH</option>
+                                                        <option>Afghanistan      AF</option>
+                                                    <option>Åland Islands      AX</option>
+                                                    <option>Albania      AL</option>
+                                                    <option>Algeria      DZ</option>
+                                                    <option>American Samoa      AS</option>
+                                                    <option>Andorra      AD</option>
+                                                    <option>Angola      AO</option>
+                                                    <option>Anguilla      AI</option>
+                                                    <option>Antarctica      AQ</option>
+                                                    <option>Antigua and Barbuda      AG</option>
+                                                    <option>Argentina      AR</option>
+                                                    <option>Armenia      AM</option>
+                                                    <option>Aruba      AW</option>
+                                                    <option>Australia      AU</option>
+                                                    <option>Austria      AT</option>
+                                                    <option>Azerbaijan      AZ</option>
+                                                    <option>Bahamas      BS</option>
+                                                    <option>Bahrain      BH</option>
+                                                    <option>Bangladesh      BD</option>
+                                                    <option>Barbados      BB</option>
+                                                    <option>Belarus      BY</option>
+                                                    <option>Belgium      BE</option>
+                                                    <option>Belize      BZ</option>
+                                                    <option>Benin      BJ</option>
+                                                    <option>Bermuda      BM</option>
+                                                    <option>Bhutan      BT</option>
+                                                    <option>Bolivia (Plurinational State of)      BO</option>
+                                                    <option>Bonaire, Sint Eustatius and Saba      BQ</option>
+                                                    <option>Bosnia and Herzegovina      BA</option>
+                                                    <option>Botswana      BW</option>
+                                                    <option>Bouvet Island      BV</option>
+                                                    <option>Brazil      BR</option>
+                                                    <option>British Indian Ocean Territory      IO</option>
+                                                    <option>Brunei Darussalam      BN</option>
+                                                    <option>Bulgaria      BG</option>
+                                                    <option>Burkina Faso      BF</option>
+                                                    <option>Burundi      BI</option>
+                                                    <option>Cabo Verde      CV</option>
+                                                    <option>Cambodia      KH</option>
+                                                    <option>Cameroon      CM</option>
+                                                    <option>Canada      CA</option>
+                                                    <option>Cayman Islands      KY</option>
+                                                    <option>Central African Republic      CF</option>
+                                                    <option>Chad      TD</option>
+                                                    <option>Chile      CL</option>
+                                                    <option>China      CN</option>
+                                                    <option>Christmas Island      CX</option>
+                                                    <option>Cocos (Keeling) Islands      CC</option>
+                                                    <option>Colombia      CO</option>
+                                                    <option>Comoros      KM</option>
+                                                    <option>Congo      CG</option>
+                                                    <option>Congo, Democratic Republic of the      CD</option>
+                                                    <option>Cook Islands      CK</option>
+                                                    <option>Costa Rica      CR</option>
+                                                    <option>Côte d'Ivoire      CI</option>
+                                                    <option>Croatia      HR</option>
+                                                    <option>Cuba      CU</option>
+                                                    <option>Curaçao      CW</option>
+                                                    <option>Cyprus      CY</option>
+                                                    <option>Czechia      CZ</option>
+                                                    <option>Denmark      DK</option>
+                                                    <option>Djibouti      DJ</option>
+                                                    <option>Dominica      DM</option>
+                                                    <option>Dominican Republic      DO</option>
+                                                    <option>Ecuador      EC</option>
+                                                    <option>Egypt      EG</option>
+                                                    <option>El Salvador      SV</option>
+                                                    <option>Equatorial Guinea      GQ</option>
+                                                    <option>Eritrea      ER</option>
+                                                    <option>Estonia      EE</option>
+                                                    <option>Eswatini      SZ</option>
+                                                    <option>Ethiopia      ET</option>
+                                                    <option>Falkland Islands (Malvinas)      FK</option>
+                                                    <option>Faroe Islands      FO</option>
+                                                    <option>Fiji      FJ</option>
+                                                    <option>Finland      FI</option>
+                                                    <option>French Guiana      GF</option>
+                                                    <option>French Polynesia      PF</option>
+                                                    <option>French Southern Territories      TF</option>
+                                                    <option>Gabon      GA</option>
+                                                    <option>Gambia      GM</option>
+                                                    <option>Georgia      GE</option>
+                                                    <option>Ghana      GH</option>
+                                                    <option>Gibraltar      GI</option>
+                                                    <option>Greece      GR</option>
+                                                    <option>Greenland      GL</option>
+                                                    <option>Grenada      GD</option>
+                                                    <option>Guadeloupe      GP</option>
+                                                    <option>Guam      GU</option>
+                                                    <option>Guatemala      GT</option>
+                                                    <option>Guernsey      GG</option>
+                                                    <option>Guinea      GN</option>
+                                                    <option>Guinea-Bissau      GW</option>
+                                                    <option>Guyana      GY</option>
+                                                    <option>Haiti      HT</option>
+                                                    <option>Heard Island and McDonald Islands      HM</option>
+                                                    <option>Holy See      VA</option>
+                                                    <option>Honduras      HN</option>
+                                                    <option>Hong Kong      HK</option>
+                                                    <option>Hungary      HU</option>
+                                                    <option>Iceland      IS</option>
+                                                    <option>India      IN</option>
+                                                    <option>Indonesia      ID</option>
+                                                    <option>Iran (Islamic Republic of)      IR</option>
+                                                    <option>Iraq      IQ</option>
+                                                    <option>Isle of Man      IM</option>
+                                                    <option>Israel      IL</option>
+                                                    <option>Italy      IT</option>
+                                                    <option>Jamaica      JM</option>
+                                                    <option>Jersey      JE</option>
+                                                    <option>Jordan      JO</option>
+                                                    <option>Kazakhstan      KZ</option>
+                                                    <option>Kenya      KE</option>
+                                                    <option>Kiribati      KI</option>
+                                                    <option>Korea (Democratic People's Republic of)      KP</option>
+                                                    <option>Korea, Republic of      KR</option>
+                                                    <option>Kuwait      KW</option>
+                                                    <option>Kyrgyzstan      KG</option>
+                                                    <option>Lao People's Democratic Republic      LA</option>
+                                                    <option>Latvia      LV</option>
+                                                    <option>Lebanon      LB</option>
+                                                    <option>Lesotho      LS</option>
+                                                    <option>Liberia      LR</option>
+                                                    <option>Libya      LY</option>
+                                                    <option>Liechtenstein      LI</option>
+                                                    <option>Lithuania      LT</option>
+                                                    <option>Macao      MO</option>
+                                                    <option>Madagascar      MG</option>
+                                                    <option>Malawi      MW</option>
+                                                    <option>Malaysia      MY</option>
+                                                    <option>Maldives      MV</option>
+                                                    <option>Mali      ML</option>
+                                                    <option>Malta      MT</option>
+                                                    <option>Marshall Islands      MH</option>
+                                                    <option>Martinique      MQ</option>
+                                                    <option>Mauritania      MR</option>
+                                                    <option>Mauritius      MU</option>
+                                                    <option>Mayotte      YT</option>
+                                                    <option>Mexico      MX</option>
+                                                    <option>Micronesia (Federated States of)      FM</option>
+                                                    <option>Moldova, Republic of      MD</option>
+                                                    <option>Monaco      MC</option>
+                                                    <option>Mongolia      MN</option>
+                                                    <option>Montenegro      ME</option>
+                                                    <option>Montserrat      MS</option>
+                                                    <option>Morocco      MA</option>
+                                                    <option>Mozambique      MZ</option>
+                                                    <option>Myanmar      MM</option>
+                                                    <option>Namibia      NA</option>
+                                                    <option>Nauru      NR</option>
+                                                    <option>Nepal      NP</option>
+                                                    <option>Netherlands      NL</option>
+                                                    <option>New Caledonia      NC</option>
+                                                    <option>New Zealand      NZ</option>
+                                                    <option>Nicaragua      NI</option>
+                                                    <option>Niger      NE</option>
+                                                    <option>Nigeria      NG</option>
+                                                    <option>Niue      NU</option>
+                                                    <option>Norfolk Island      NF</option>
+                                                    <option>North Macedonia      MK</option>
+                                                    <option>Northern Mariana Islands      MP</option>
+                                                    <option>Norway      NO</option>
+                                                    <option>Oman      OM</option>
+                                                    <option>Pakistan      PK</option>
+                                                    <option>Palau      PW</option>
+                                                    <option>Palestine, State of      PS</option>
+                                                    <option>Panama      PA</option>
+                                                    <option>Papua New Guinea      PG</option>
+                                                    <option>Paraguay      PY</option>
+                                                    <option>Peru      PE</option>
+                                                    <option>Philippines      PH</option>
+                                                    <option>Pitcairn      PN</option>
+                                                    <option>Poland      PL</option>
+                                                    <option>Portugal      PT</option>
+                                                    <option>Puerto Rico      PR</option>
+                                                    <option>Qatar      QA</option>
+                                                    <option>Réunion      RE</option>
+                                                    <option>Romania      RO</option>
+                                                    <option>Russian Federation      RU</option>
+                                                    <option>Rwanda      RW</option>
+                                                    <option>Saint Barthélemy      BL</option>
+                                                    <option>Saint Helena, Ascension and Tristan da Cunha      SH</option>
+                                                    <option>Saint Kitts and Nevis      KN</option>
+                                                    <option>Saint Lucia      LC</option>
+                                                    <option>Saint Martin (French part)      MF</option>
+                                                    <option>Saint Pierre and Miquelon      PM</option>
+                                                    <option>Saint Vincent and the Grenadines      VC</option>
+                                                    <option>Samoa      WS</option>
+                                                    <option>San Marino      SM</option>
+                                                    <option>Sao Tome and Principe      ST</option>
+                                                    <option>Saudi Arabia      SA</option>
+                                                    <option>Senegal      SN</option>
+                                                    <option>Serbia      RS</option>
+                                                    <option>Seychelles      SC</option>
+                                                    <option>Sierra Leone      SL</option>
+                                                    <option>Singapore      SG</option>
+                                                    <option>Sint Maarten (Dutch part)      SX</option>
+                                                    <option>Slovakia      SK</option>
+                                                    <option>Slovenia      SI</option>
+                                                    <option>Solomon Islands      SB</option>
+                                                    <option>Somalia      SO</option>
+                                                    <option>South Africa      ZA</option>
+                                                    <option>South Georgia and the South Sandwich Islands      GS</option>
+                                                    <option>South Sudan      SS</option>
+                                                    <option>Spain      ES</option>
+                                                    <option>Sri Lanka      LK</option>
+                                                    <option>Sudan      SD</option>
+                                                    <option>Suriname      SR</option>
+                                                    <option>Svalbard and Jan Mayen      SJ</option>
+                                                    <option>Sweden      SE</option>
+                                                    <option>Syrian Arab Republic      SY</option>
+                                                    <option>Taiwan, Province of China      TW</option>
+                                                    <option>Tajikistan      TJ</option>
+                                                    <option>Tanzania, United Republic of      TZ</option>
+                                                    <option>Thailand      TH</option>
+                                                    <option>Timor-Leste      TL</option>
+                                                    <option>Togo      TG</option>
+                                                    <option>Tokelau      TK</option>
+                                                    <option>Tonga      TO</option>
+                                                    <option>Trinidad and Tobago      TT</option>
+                                                    <option>Tunisia      TN</option>
+                                                    <option>Turkey      TR</option>
+                                                    <option>Turkmenistan      TM</option>
+                                                    <option>Turks and Caicos Islands      TC</option>
+                                                    <option>Tuvalu      TV</option>
+                                                    <option>Uganda      UG</option>
+                                                    <option>Ukraine      UA</option>
+                                                    <option>United Arab Emirates      AE</option>
+                                                    <option>United States Minor Outlying Islands      UM</option>
+                                                    <option>Uruguay      UY</option>
+                                                    <option>Uzbekistan      UZ</option>
+                                                    <option>Vanuatu      VU</option>
+                                                    <option>Venezuela (Bolivarian Republic of)      VE</option>
+                                                    <option>Viet Nam      VN</option>
+                                                    <option>Virgin Islands (British)      VG</option>
+                                                    <option>Virgin Islands (U.S.)      VI</option>
+                                                    <option>Wallis and Futuna      WF</option>
+                                                    <option>Western Sahara      EH</option>
+                                                    <option>Yemen      YE</option>
+                                                    <option>Zambia      ZM</option>
+                                                    <option>Zimbabwe      ZW</option>    
+                                                        </select>
+		    </form>
+	</div>
 	</div>
 	<!-- Bootstrap Table -->
-	<table class="table">
+	<table class="table table-borderless thead-dark table-sm">
 		<thead>
 			<tr>
 				<th scope="col">Country</th>
 				<th scope="col">Date YYYY-MM-DD</th>
 				<th scope="col">Description</th>
-                <th scope="col">No. of Impacted Funds</th>
+				<th scope="col">No. of Funds</th>
 			</tr>
 		</thead>
 		<tbody id="tdata">
@@ -314,7 +314,7 @@
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.5.0/js/bootstrap.min.js"></script>
 	<script src="assets/js/main.js"></script>
-    
+
 </body>
 
 </html>
