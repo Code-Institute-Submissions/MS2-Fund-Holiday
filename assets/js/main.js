@@ -17,7 +17,7 @@ let userSystemDate = new Date();
 let userSystemYear = userSystemDate.getFullYear();
 let userSystemMonth = userSystemDate.getMonth();
 //
-console.log(userSystemMonth);
+
 // required to convert system dates to dates for api calls. August returns 7 from the system, 8 is required to request August holidays from api.
 let currentMonth = userSystemMonth + 1;
 let nextYear = userSystemYear + 1;
@@ -380,6 +380,15 @@ if (userSystemMonth < 11) {
   return n;
   
 }
+
+let irishFunds = ["Eur Equity", "ABC Bio Technology", "ABC Blue Chip", "ABC Small Cap"];
+
+let usFunds = ["US Equity", "DEF Bio Technology", "Argideen Blue Chip", "XYZ Small Cap", "US Large Cap"];
+
+let ukFunds = ["UK Equity", "UK Bio Technology", "UK Blue Chip"];
+
+let japanFunds= ["Japan Equity", "Japan Bio Technology", "ABC Blue Chip", "ABC Small Cap", "LU Eur Equity", " LU ABC Bio Technology", "LU ABC Blue Chip", "LU ABC Small Cap"];
+
 //Polygon Funds
 function polygonFunction() {
 
@@ -404,16 +413,21 @@ function polygonFunction() {
                 let date = data.response.holidays[i].date.iso;
                 let description = data.response.holidays[i].name;
 
-if(name==="Ireland"){
- noOfFunds = irishFunds.length;
-} else if (name === "Japan"){
-    noOfFunds = japanFunds.length;
-} else if (name === "United States"){
-    noOfFunds = usFunds.length;
-} else if (name === "United Kingdom"){
-    noOfFunds = ukFunds.length;
-} else {
-    noOfFunds = 0;
+switch (name){
+    case "Ireland":
+        noOfFunds = irishFunds.length;
+        break;
+    case "Japan":
+        noOfFunds = japanFunds.length;
+        break;
+    case "United States":
+        noOfFunds = usFunds.length;
+        break;    
+    case "United Kingdom":
+        noOfFunds = ukFunds.length;
+        break;    
+    default:
+        noOfFunds = 0;
 }
 
 
@@ -448,16 +462,21 @@ if(name==="Ireland"){
                     let date = data.response.holidays[i].date.iso;
                     let description = data.response.holidays[i].name;
 
-if(name==="Ireland"){
- noOfFunds = irishFunds.length;
-} else if (name === "Japan"){
-    noOfFunds = japanFunds.length;
-} else if (name === "United States"){
-    noOfFunds = usFunds.length;
-} else if (name === "United Kingdom"){
-    noOfFunds = ukFunds.length;
-} else {
-    noOfFunds = 0;
+switch (name){
+    case "Ireland":
+        noOfFunds = irishFunds.length;
+        break;
+    case "Japan":
+        noOfFunds = japanFunds.length;
+        break;
+    case "United States":
+        noOfFunds = usFunds.length;
+        break;    
+    case "United Kingdom":
+        noOfFunds = ukFunds.length;
+        break;    
+    default:
+        noOfFunds = 0;
 }
 
                     $("#tdata").append("<tr>" +
