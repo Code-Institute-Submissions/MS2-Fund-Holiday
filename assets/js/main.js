@@ -61,28 +61,28 @@ function getCountryHolidays() {
                 "<td>" + date + "</td>" +
                 "<td>" + description + "</td>"
                 + "</tr>");
-               if (document.getElementById("tdata")== " ") {
-                        
-                    } else {
-                        q = q + 1;
-                        console.log(q);
-                    }
-        }
-console.log(q);
-            if (q < 1) {
-                $("#tdata").append("<tr>" +
-                    "<td>" + iscde + "</td>" +
-                    
-                    "<td>" + "No holidays for month " + currentMonth + "</td>"
-                    + "</tr>");
+            if (document.getElementById("tdata") == " ") {
+
+            } else {
+                q = q + 1;
+                console.log(q);
             }
+        }
+        console.log(q);
+        if (q < 1) {
+            $("#tdata").append("<tr>" +
+                "<td>" + iscde + "</td>" +
+
+                "<td>" + "No holidays for month " + currentMonth + "</td>"
+                + "</tr>");
+        }
 
 
 
     })
 
     // get next month if it's in the current year else January of the the following year
-     
+
     if (currentMonth < 12) {
         q = 0;
         $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear + monthFormat + nextMonth + type, function (data) {
@@ -98,19 +98,19 @@ console.log(q);
                     "<td>" + date + "</td>" +
                     "<td>" + description + "</td>"
                     + "</tr>");
-                    
-                    if (document.getElementById("tdata")== " ") {
-                        
-                    } else {
-                        q = q + 1;
-                        console.log(q);
-                    }
+
+                if (document.getElementById("tdata") == " ") {
+
+                } else {
+                    q = q + 1;
+                    console.log(q);
+                }
             }
             console.log(q);
             if (q < 1) {
                 $("#tdata").append("<tr>" +
                     "<td>" + iscde + "</td>" +
-                    
+
                     "<td>" + "No holidays for month " + nextMonth + "</td>"
                     + "</tr>");
             }
@@ -134,32 +134,32 @@ console.log(q);
                     "<td>" + description + "</td>"
                     + "</tr>");
 
-                    if (document.getElementById("tdata")== " ") {
-                        
-                    } else {
-                        q = q + 1;
-                        console.log(q);
-                        
-                    }
+                if (document.getElementById("tdata") == " ") {
+
+                } else {
+                    q = q + 1;
+                    console.log(q);
+
+                }
             }
         })
         console.log(q);
-            if (q < 1) {
-                $("#tdata").append("<tr>" +
-                    "<td>" + iscde + "</td>" +
-                    
-                    "<td>" + "No holidays for month " + nextMonth + "</td>"
-                    + "</tr>");
-            }
+        if (q < 1) {
+            $("#tdata").append("<tr>" +
+                "<td>" + iscde + "</td>" +
+
+                "<td>" + "No holidays for month " + nextMonth + "</td>"
+                + "</tr>");
+        }
 
 
 
     }
-/*if (document.getElementsByTagName("td").length > 0) {
-    console.log("boo")
-} else {
-    console.log(document.getElementsByTagName("td").length);
-}*/
+    /*if (document.getElementsByTagName("td").length > 0) {
+        console.log("boo")
+    } else {
+        console.log(document.getElementsByTagName("td").length);
+    }*/
 
 
 }
@@ -230,6 +230,9 @@ function watchlistFunction() {
     for (let z = 0; z < watchlistArray.length; z++) {
         $.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
             console.log(data);
+//q is a counter variable. If there is a holiday it will increment by 1. If it's zero after the api call user will get a message that there are no holidays for the month in the table.
+        let q = 0;
+
             for (let i in data.response.holidays) {
                 console.log(data.response.holidays[i]);
                 let name = data.response.holidays[i].country.name;
@@ -242,11 +245,24 @@ function watchlistFunction() {
                     "<td>" + description + "</td>"
 
                     + "</tr>");
+                if (document.getElementById("tdata") == " ") {
+
+                } else {
+                    q = q + 1;
+                }
+            }
+            if (q < 1) {
+                $("#tdata").append("<tr>" +
+                    "<td>" + watchlist[z] + "</td>" +
+
+                    "<td>" + "No holidays for month " + currentMonth + "</td>"
+                    + "</tr>");
             }
         })
+
         if (currentMonth < 12) {
             $.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + userSystemYear + monthFormat + nextMonth + type, function (data) {
-
+                 q = 0;
                 for (let i in data.response.holidays) {
                     console.log(data.response.holidays[i]);
                     let name = data.response.holidays[i].country.name;
@@ -259,11 +275,26 @@ function watchlistFunction() {
                         "<td>" + description + "</td>"
 
                         + "</tr>");
+                    if (document.getElementById("tdata") == " ") {
+
+                    } else {
+                        q = q + 1;
+                        console.log(q);
+                    }
                 }
+                if (q < 1) {
+                    $("#tdata").append("<tr>" +
+                        "<td>" + watchlist[z] + "</td>" +
+
+                        "<td>" + "No holidays for month " + nextMonth + "</td>"
+                        + "</tr>");
+                }
+
+
             })
         } else {
             $.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + nextYear + monthFormat + nextMonth + type, function (data) {
-
+                 q = 0;
                 for (let i in data.response.holidays) {
                     console.log(data.response.holidays[i]);
                     let name = data.response.holidays[i].country.name;
@@ -277,13 +308,26 @@ function watchlistFunction() {
 
                         + "</tr>");
 
-                    $(document).ready(function () {
-                        $("#tdata").dataTable();
+                    if (document.getElementById("tdata") == " ") {
 
-                    });
+                    } else {
+                        q = q + 1;
+                        console.log(q);
+
+                    }
+
+
 
                 }
-            })
+                if (q < 1) {
+                    $("#tdata").append("<tr>" +
+                        "<td>" + watchlist[z] + "</td>" +
+
+                        "<td>" + "No holidays for month " + nextMonth + "</td>"
+                        + "</tr>");
+
+                }
+                })
 
         }
     }
