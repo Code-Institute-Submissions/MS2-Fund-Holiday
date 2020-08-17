@@ -38,6 +38,7 @@ function getCountryHolidays() {
         clearTable.deleteRow(0);
     }
 
+
     // get ISO code freom the User selection to input to api call
     let iscde = document.getElementById("countryForm").value;
     let isoCode = iscde.slice(-2);
@@ -45,6 +46,8 @@ function getCountryHolidays() {
     // https://www.youtube.com/watch?v=InoAIgBZIEA
     //https://www.youtube.com/watch?v=kJTAXn_xmjo
     $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
+        //q is a counter variable. If there is a holiday it will increment by 1. If it's zero after the api call user will get a message that there are no holidays for the month in the table.
+        let q = 0;
         console.log(data);
         // run through the reurned array and add each holiday to the table.
         for (let i in data.response.holidays) {
@@ -58,11 +61,30 @@ function getCountryHolidays() {
                 "<td>" + date + "</td>" +
                 "<td>" + description + "</td>"
                 + "</tr>");
+               if (document.getElementById("tdata")== " ") {
+                        
+                    } else {
+                        q = q + 1;
+                        console.log(q);
+                    }
         }
+console.log(q);
+            if (q < 1) {
+                $("#tdata").append("<tr>" +
+                    "<td>" + iscde + "</td>" +
+                    
+                    "<td>" + "No holidays for month " + currentMonth + "</td>"
+                    + "</tr>");
+            }
+
+
+
     })
 
     // get next month if it's in the current year else January of the the following year
+     
     if (currentMonth < 12) {
+        q = 0;
         $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + userSystemYear + monthFormat + nextMonth + type, function (data) {
 
             for (let i in data.response.holidays) {
@@ -76,12 +98,30 @@ function getCountryHolidays() {
                     "<td>" + date + "</td>" +
                     "<td>" + description + "</td>"
                     + "</tr>");
+                    
+                    if (document.getElementById("tdata")== " ") {
+                        
+                    } else {
+                        q = q + 1;
+                        console.log(q);
+                    }
+            }
+            console.log(q);
+            if (q < 1) {
+                $("#tdata").append("<tr>" +
+                    "<td>" + iscde + "</td>" +
+                    
+                    "<td>" + "No holidays for month " + nextMonth + "</td>"
+                    + "</tr>");
             }
         })
+
+
+
     } else {
 
         $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + nextYear + monthFormat + nextMonth + type, function (data) {
-
+            q = 0;
             for (let i in data.response.holidays) {
                 console.log(data.response.holidays[i]);
                 let name = data.response.holidays[i].country.name;
@@ -93,9 +133,35 @@ function getCountryHolidays() {
                     "<td>" + date + "</td>" +
                     "<td>" + description + "</td>"
                     + "</tr>");
+
+                    if (document.getElementById("tdata")== " ") {
+                        
+                    } else {
+                        q = q + 1;
+                        console.log(q);
+                        
+                    }
             }
         })
+        console.log(q);
+            if (q < 1) {
+                $("#tdata").append("<tr>" +
+                    "<td>" + iscde + "</td>" +
+                    
+                    "<td>" + "No holidays for month " + nextMonth + "</td>"
+                    + "</tr>");
+            }
+
+
+
     }
+/*if (document.getElementsByTagName("td").length > 0) {
+    console.log("boo")
+} else {
+    console.log(document.getElementsByTagName("td").length);
+}*/
+
+
 }
 
 
