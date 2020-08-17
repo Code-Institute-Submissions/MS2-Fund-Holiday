@@ -238,12 +238,31 @@ function watchlistFunction() {
                 let name = data.response.holidays[i].country.name;
                 let date = data.response.holidays[i].date.iso;
                 let description = data.response.holidays[i].name;
+switch (name){
+    case "Ireland":
+        noOfFunds = irishFunds.length;
+        break;
+    case "Japan":
+        noOfFunds = japanFunds.length;
+        break;
+    case "United States":
+        noOfFunds = usFunds.length;
+        break;    
+    case "United Kingdom":
+        noOfFunds = ukFunds.length;
+        break;    
+    default:
+        noOfFunds = 0;
+}
+
+
+
 
                 $("#tdata").append("<tr>" +
                     "<td>" + name + "</td>" +
                     "<td>" + date + "</td>" +
-                    "<td>" + description + "</td>"
-
+                    "<td>" + description + "</td>"+
+"<td>" + noOfFunds + "</td>"
                     + "</tr>");
                 if (document.getElementById("tdata") == " ") {
 
@@ -269,11 +288,33 @@ function watchlistFunction() {
                     let date = data.response.holidays[i].date.iso;
                     let description = data.response.holidays[i].name;
 
+                    switch (name){
+    case "Ireland":
+        noOfFunds = irishFunds.length;
+        break;
+    case "Japan":
+        noOfFunds = japanFunds.length;
+        break;
+    case "United States":
+        noOfFunds = usFunds.length;
+        break;    
+    case "United Kingdom":
+        noOfFunds = ukFunds.length;
+        break;    
+    default:
+        noOfFunds = 0;
+}
+
+
+
+
+
+
                     $("#tdata").append("<tr>" +
                         "<td>" + name + "</td>" +
                         "<td>" + date + "</td>" +
-                        "<td>" + description + "</td>"
-
+                        "<td>" + description + "</td>"+
+                        "<td>" + noOfFunds + "</td>"
                         + "</tr>");
                     if (document.getElementById("tdata") == " ") {
 
@@ -300,12 +341,30 @@ function watchlistFunction() {
                     let name = data.response.holidays[i].country.name;
                     let date = data.response.holidays[i].date.iso;
                     let description = data.response.holidays[i].name;
-                    //let holidayDescription= data.response.holidays[i].description;
+                    
+                    switch (name){
+    case "Ireland":
+        noOfFunds = irishFunds.length;
+        break;
+    case "Japan":
+        noOfFunds = japanFunds.length;
+        break;
+    case "United States":
+        noOfFunds = usFunds.length;
+        break;    
+    case "United Kingdom":
+        noOfFunds = ukFunds.length;
+        break;    
+    default:
+        noOfFunds = 0;
+}
+
+
                     $("#tdata").append("<tr>" +
                         "<td>" + name + "</td>" +
                         "<td>" + date + "</td>" +
-                        "<td>" + description + "</td>"
-
+                        "<td>" + description + "</td>"+
+"<td>" + noOfFunds + "</td>"
                         + "</tr>");
 
                     if (document.getElementById("tdata") == " ") {
