@@ -1,24 +1,40 @@
+
+
+.jumbotron {
+    background-color: #483d8b;
+    color: #fff; 
+}
+
+.jumbotronText{
+    font-size: 1.4rem;
+    font-weight: 300;
+    line-height: 1.2;
+}
+
+.btn-primary {
+    color: #fff;
+    background-color: #a9a9a9;
+    border-color: #a9a9a9;
+}
+
 .size {
  width:150px;
- height: 90px;
+ height: 120px;
 }
 
 .menuitem {
 text-align: center;
+
 }
 
 .menuitem i {
  text-align: center;
-    padding: 0;  
-}
-
-.annualNavBar {
-    box-sizing: inherit;
+    padding: 0;
+     
 }
 
 .buttonTop {
 margin-top: 30px;
 }
-.jumbotronText{
-    font-size: 1.4rem;
-}
+
+
