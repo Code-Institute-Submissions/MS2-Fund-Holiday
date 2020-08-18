@@ -145,7 +145,7 @@ function watchlistFunction() {
                 $("#tdata").append("<tr>" +
                     "<td>" + watchlist[z] + "</td>" +
                     "<td>" + " - " + "</td>" +
-                    "<td>" + "No holidays for " + thisMonthsName() + "</td>"
+                    "<td>" + "No hols for " + thisMonthsName() + "</td>"
                     + "</tr>");
             }
         })
@@ -195,7 +195,7 @@ function watchlistFunction() {
                     $("#tdata").append("<tr>" +
                         "<td>" + watchlist[z] + "</td>" +
                         "<td>" + " - " + "</td>" +
-                        "<td>" + "No holidays for " + nextMonthName() + "</td>"
+                        "<td>" + "No hols for " + nextMonthName() + "</td>"
                         + "</tr>");
                 }
 
@@ -246,7 +246,7 @@ function watchlistFunction() {
                     $("#tdata").append("<tr>" +
                         "<td>" + watchlist[z] + "</td>" +
                         "<td>" + " - " + "</td>" +
-                        "<td>" + "No holidays for " + + nextMonthName() + "</td>"
+                        "<td>" + "No hols for " + + nextMonthName() + "</td>"
                         + "</tr>");
                 }
             })
@@ -368,7 +368,7 @@ function polygonFunction() {
                 $("#tdata").append("<tr>" +
                     "<td>" + polygonFundsCountries[z] + "</td>" +
                     "<td>" + " - " + "</td>" +
-                    "<td>" + "No holidays for " + thisMonthsName() + "</td>"
+                    "<td>" + "No hols for " + thisMonthsName() + "</td>"
                     + "</tr>");
             }
         })
@@ -416,7 +416,7 @@ function polygonFunction() {
                     $("#tdata").append("<tr>" +
                         "<td>" + polygonFundsCountries[z] + "</td>" +
                         "<td>" + " - " + "</td>" +
-                        "<td>" + "No holidays for " + nextMonthName() + "</td>"
+                        "<td>" + "No hols for " + nextMonthName() + "</td>"
                         + "</tr>");
                 }
 
@@ -466,7 +466,7 @@ function polygonFunction() {
                     $("#tdata").append("<tr>" +
                         "<td>" + polygonFundsCountries[z] + "</td>" +
                         "<td>" + " - " + "</td>" +
-                        "<td>" + "No holidays for " + + nextMonthName() + "</td>"
+                        "<td>" + "No hols for "  + nextMonthName() + "</td>"
                         + "</tr>");
                 }
             })
