@@ -291,17 +291,25 @@
                                                     <option>Zimbabwe      ZW</option>    
                                                         </select>
 			</form>
+            <div class="container">
 			<div class="row">
 				<div class="col">
 					<a>
 						<button class="btn btn-primary" onclick="watchlistFunction()">Run Watchlist</button>
 					</a>
-					<a>
-						<button class="btn btn-primary" onclick="polygonFunction()">Polygon Funds</button>
-					</a>
+					
 
 				</div>
 			</div>
+            <!-- Group funds only available on mid screens and up for readability -->
+            <div class="row  d-none d-md-block">
+            <div class="col">
+            <a>
+						<button class="btn btn-primary" onclick="polygonFunction()">Polygon Funds</button>
+					</a>
+            </div>
+            </div>
+            </div>
 		</div>
 	</div>
 	<!-- Bootstrap Table -->
