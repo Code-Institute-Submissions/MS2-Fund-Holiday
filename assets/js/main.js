@@ -90,14 +90,19 @@ function watchlistFunction() {
     // https://stackoverflow.com/questions/3243476/how-to-get-multiple-select-box-values-using-jquery
     watchlist = $('#watchlistForm').val();
     
-
+    
 
     //extract the Iso codes from the users selections
     for (let m = 0; m < watchlist.length; m++) {
         watchlistArray[m] = watchlist[m].slice(-2);
     }
+  
+if (typeof(watchlistArray[0]) != "string") {
+    return alert("Please choose country(s)");
+} else {
+    "";
+}
 
-    console.log(watchlistArray[0]);
 
     for (let z = 0; z < watchlistArray.length; z++) {
         $.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
