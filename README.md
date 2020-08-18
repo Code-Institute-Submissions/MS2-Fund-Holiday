@@ -106,7 +106,8 @@ As a user I would like to get the National public holidays per country per year 
     . Having tested numerous times I've deciced to remove one of the selection boxes as I've been using the multiple selection box for everything as the countries we need most apear at the top and I believe having only 1 option will improve the UX.
 . Removed the group function from mobile view to improve readability. Information appeared cluttered and difficult to read.
     User still has the option to group them manually.
-    Also changed table headings and message the user receives when there are no holidays for the same reason.    
+    Also changed table headings and message the user receives when there are no holidays for the same reason.  
+    If user doesn't select a country and clicks the button nothing happens. Added a message to prompt them if nothing selected.  
     
 ## Deployment
 

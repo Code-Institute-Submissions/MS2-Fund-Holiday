@@ -97,13 +97,14 @@ function watchlistFunction() {
         watchlistArray[m] = watchlist[m].slice(-2);
     }
   
+    // if no country is selected prompt user
 if (typeof(watchlistArray[0]) != "string") {
     return alert("Please choose country(s)");
 } else {
     "";
 }
 
-
+// run through the returned array and add each holiday to the table.
     for (let z = 0; z < watchlistArray.length; z++) {
         $.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
             console.log(data);
@@ -326,6 +327,7 @@ function polygonFunction() {
     let polygonFunds = ["IE", "GB", "US", "JP"];
     let polygonFundsCountries = ["Ireland", "United Kingdom", "United States", "Japan"];
 
+// run through the returned array and add each holiday to the table.
     for (let z = 0; z < polygonFunds.length; z++) {
 
         $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
@@ -378,6 +380,7 @@ function polygonFunction() {
             }
         })
 
+        //get next month if not January
         if (currentMonth < 12) {
             $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + userSystemYear + monthFormat + nextMonth + type, function (data) {
                 q = 0;
@@ -427,6 +430,7 @@ function polygonFunction() {
 
             })
         } else {
+            //get next month if January
             $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + nextYear + monthFormat + nextMonth + type, function (data) {
                 q = 0;
                 for (let i in data.response.holidays) {
@@ -451,7 +455,6 @@ function polygonFunction() {
                         default:
                             noOfFunds = 0;
                     }
-
 
                     $("#tdata").append("<tr>" +
                         "<td>" + name + "</td>" +
