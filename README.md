@@ -104,6 +104,9 @@ As a user I would like to get the National public holidays per country per year 
     . Numerous countries tested and all returning expected number of funds. 
     . Where we don't have funds but there are holidays the impacted funds show as zero, where there are no holidays impacted funds is blank.
     . Having tested numerous times I've deciced to remove one of the selection boxes as I've been using the multiple selection box for everything as the countries we need most apear at the top and I believe having only 1 option will improve the UX.
+. Removed the group function from mobile view to improve readability. Information appeared cluttered and difficult to read.
+    User still has the option to group them manually.
+    Also changed table headings and message the user receives when there are no holidays for the same reason.    
     
 ## Deployment
 

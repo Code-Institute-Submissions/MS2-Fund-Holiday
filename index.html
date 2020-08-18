@@ -13,17 +13,17 @@
 
 <body>
 
-<header>
-<ul class="nav justify-content-center menuitem">
-          <li class="nav-item size">
-            <a class="nav-link active" href="annualcalendar.html">
-              <i class="fa fa-calendar"></i><br>
-              <span>Get Annual Calendar</span>
+	<header>
+		<ul class="nav justify-content-center menuitem">
+			<li class="nav-item size">
+				<a class="nav-link active" href="annualcalendar.html">
+					<i class="fa fa-calendar"></i><br>
+					<span>Get Annual Calendar</span>
 
-            </a>
-          </li>
-        </ul>
-</header>
+				</a>
+			</li>
+		</ul>
+	</header>
 
 
 
@@ -291,36 +291,38 @@
                                                     <option>Zimbabwe      ZW</option>    
                                                         </select>
 			</form>
-            <div class="container">
-			<div class="row">
-				<div class="col">
-					<a>
-						<button class="btn btn-primary" onclick="watchlistFunction()">Run Watchlist</button>
-					</a>
-					
+			<div class="container">
+				<div class="row buttonTop justify-content-center">
+
+					<div class="col-xs-auto">
+						<a>
+							<button class="btn btn-primary" onclick="watchlistFunction()">Get Upcoming Holidays</button>
+						</a>
+
+					</div>
 
 				</div>
+				<!-- Group funds only available on mid screens and up for readability -->
+				<div class="row  d-none d-md-block">
+					<div class="col">
+						<a>
+							<button class="btn btn-primary" onclick="polygonFunction()">Polygon Funds</button>
+						</a>
+					</div>
+				</div>
 			</div>
-            <!-- Group funds only available on mid screens and up for readability -->
-            <div class="row  d-none d-md-block">
-            <div class="col">
-            <a>
-						<button class="btn btn-primary" onclick="polygonFunction()">Polygon Funds</button>
-					</a>
-            </div>
-            </div>
-            </div>
 		</div>
 	</div>
+
 	<!-- Bootstrap Table -->
 	<table class="table table-borderless thead-dark table-sm">
 		<thead>
 			<tr>
 				<th scope="col">Country</th>
 				<th scope="col">YYYY-MM-DD</th>
-				
-					<th scope="col">Description</th>
-				
+
+				<th scope="col">Description</th>
+
 				<th scope="col">Funds</th>
 			</tr>
 		</thead>

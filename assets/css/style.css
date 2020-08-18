@@ -15,3 +15,7 @@ text-align: center;
 .annualNavBar {
     box-sizing: inherit;
 }
+
+.buttonTop {
+margin-top: 30px;
+}
