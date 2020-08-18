@@ -13,9 +13,18 @@
 
 <body>
 
-	<a href="index.html">
-		<button class="btn btn-primary">Home</button>
-	</a>
+<header>
+<ul class="nav justify-content-center menuitem">
+          <li class="nav-item size">
+            <a class="nav-link active" href="index.html">
+              <i class="fa fa-home"></i><br>
+              <span>Home</span>
+
+            </a>
+          </li>
+        </ul>
+</header>
+
 
 	<!-- Bootstrap Jumbotron -->
 	<div class="jumbotron">
@@ -285,7 +294,7 @@
 		<form id="searchFormA">
 
 
-			<select class="form-control" id="years"  placeholder="Choose Country" >
+			<select class="form-control text-center" id="years"  placeholder="Choose Country" >
                                                                 <option>Choose Year</option>
                                                             <option>2020</option>
                                                         <option>2021</option>
@@ -326,12 +335,12 @@
         </div>
 	</div>
 	<!-- Bootstrap Table -->
-	<table class="table table-borderless thead-dark table-sm">
+	<table class="table table-borderless thead-dark">
 		<thead>
 			<tr>
-				<th scope="col">Country</th>
-				<th scope="col">Date YYYY-MM-DD</th>
-				<th scope="col">Description</th>
+				<th>Country</th>
+				<th>Date YYYY-MM-DD</th>
+				<th>Description</th>
 
 			</tr>
 		</thead>
