@@ -12,31 +12,27 @@
 </head>
 
 <body>
-
+<div class="container">
+<div class="row">
+<div class="col col-4">
 	<a href="annualcalendar.html">
-		<button class="btn btn-primary">Annual</button>
+		<button class="btn btn-primary">Annual Calendar</button>
 	</a>
-
-	<a>
-		<button class="btn btn-primary" onclick="watchlistFunction()">Run Watchlist</button>
-	</a>
-
-
-
-	<a>
-		<button class="btn btn-primary" onclick="polygonFunction()">Polygon Funds</button>
-	</a>
+    
+    </div>
+</div>
+</div>
 
 	<!-- Bootstrap Jumbotron -->
 	<div class="jumbotron">
-        <div class="container">
+		<div class="container">
 
-		    <!-- Bootstrap FORM -->
+			<!-- Bootstrap FORM -->
 
-		<form id="searchFormB">
+			<form id="searchFormB">
 
-			<h1 class="display-4">Choose country(s)</h1>
-			<select multiple class="form-control" id="watchlistForm" >
+				<h1 class="display-4 text-center">Choose country(s)</h1>
+				<select multiple class="form-control text-center" id="watchlistForm" >
 
         <!-- https://calendarific.com/supported-countries -->
                                                         <option>--Reset--</option>    
@@ -290,16 +286,29 @@
                                                     <option>Zambia      ZM</option>
                                                     <option>Zimbabwe      ZW</option>    
                                                         </select>
-		    </form>
-	</div>
+			</form>
+			<div class="row">
+				<div class="col">
+					<a>
+						<button class="btn btn-primary" onclick="watchlistFunction()">Run Watchlist</button>
+					</a>
+					<a>
+						<button class="btn btn-primary" onclick="polygonFunction()">Polygon Funds</button>
+					</a>
+
+				</div>
+			</div>
+		</div>
 	</div>
 	<!-- Bootstrap Table -->
 	<table class="table table-borderless thead-dark table-sm">
 		<thead>
 			<tr>
 				<th scope="col">Country</th>
-				<th scope="col">Date YYYY-MM-DD</th>
-				<th scope="col">Description</th>
+				<th scope="col">YYYY-MM-DD</th>
+				<div class="d-md-block">
+					<th scope="col">Description</th>
+				</div>
 				<th scope="col">No. of Funds</th>
 			</tr>
 		</thead>
