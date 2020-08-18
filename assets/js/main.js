@@ -19,7 +19,7 @@ let userSystemMonth = userSystemDate.getMonth();
 //
 
 // required to convert system dates to dates for api calls. August returns 7 from the system, 8 is required to request August holidays from api.
-let currentMonth = userSystemMonth + 5;
+let currentMonth = userSystemMonth + 1;
 let nextYear = userSystemYear + 1;
 let nextMonth;
 
@@ -57,11 +57,9 @@ function getAnnualCountryHolidays() {
     // https://www.youtube.com/watch?v=InoAIgBZIEA
     //https://www.youtube.com/watch?v=kJTAXn_xmjo
     $.getJSON(baseURL + apk + countryFormat + isoCode + yearFormat + year + type, function (data) {
-        console.log(data);
-
+        
         // run through the returned array and add each holiday to the table.
         for (let i in data.response.holidays) {
-            console.log(data.response.holidays[i]);
             let name = data.response.holidays[i].country.name;
             let date = data.response.holidays[i].date.iso;
             let description = data.response.holidays[i].name;

@@ -135,6 +135,20 @@ As a user I would like to get the National public holidays per country per year 
     Holidays for the whole year returned which was not expected. Ater researching userSystemMonth -7 = 0 above is incorrect. Inputting 0 to the API call returns hols for the whole year.
     Updated to userSystemMonth - 6 and hols for Jan and Feb were returned as expected. Message references no hols in September but it's reading direct from the sysytem so working as expected.
     Changed it back to userSystemMonth+5 to remove console.logs. Refreshed and ran both buttons again. Results as expected.
+    Changed it back to userSystemMonth+1 for final tests.
+    Refreshed page. Ran Ireland UK and Japan. Returned Expected results for August and September.
+    Ran the "get all Polygon Funds button".Returned Expected results for August and September.
+ . Annual Calendar Page.
+    Added in a Title to tell user it's the annual calendar.
+    Clicked Get Calendar button. Got a message to choose country and year.
+    Chose Algeria and clicked button. Got message again.
+    Chose 2021, clicked button and ran as expected.
+    Checked responsiveness, looks good on mobile.
+    Refreshed page. Chose 2022. Got the message to choose country and year again.
+    Chose Malta, clicked button and gt expected results.
+    Removed console.logs. Ran Nigeria 2027 and got expected results.
+
+
     
 ## Deployment
 
