@@ -89,11 +89,15 @@ function watchlistFunction() {
 
     // https://stackoverflow.com/questions/3243476/how-to-get-multiple-select-box-values-using-jquery
     watchlist = $('#watchlistForm').val();
+    
+
 
     //extract the Iso codes from the users selections
     for (let m = 0; m < watchlist.length; m++) {
         watchlistArray[m] = watchlist[m].slice(-2);
     }
+
+    console.log(watchlistArray[0]);
 
     for (let z = 0; z < watchlistArray.length; z++) {
         $.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
@@ -306,7 +310,7 @@ let ukFunds = ["UK Equity", "UK Bio Technology", "UK Blue Chip"];
 
 let japanFunds = ["Japan Equity", "Japan Bio Technology", "ABC Blue Chip", "ABC Small Cap", "LU Eur Equity", " LU ABC Bio Technology", "LU ABC Blue Chip", "LU ABC Small Cap"];
 
-//Polygon Funds Group Function wit fixed arrays.
+//Polygon Funds Group Function with fixed arrays.
 function polygonFunction() {
 
     let clearTable = document.getElementById("tdata");
