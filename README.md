@@ -108,6 +108,33 @@ As a user I would like to get the National public holidays per country per year 
     User still has the option to group them manually.
     Also changed table headings and message the user receives when there are no holidays for the same reason.  
     If user doesn't select a country and clicks the button nothing happens. Added a message to prompt them if nothing selected.  
+. Final Checks.
+    From Index.html
+    Clicked "Get Annual Calendar" and the link worked. Clicked Home to get back successfully.
+    Checked responsiveness. 1 button and message in view on small screens as expected.
+    2 buttons and on screen messages on larger screens as expected.
+    Clicked the Get Holidays button. Got a message to choose a country or countries as expected.
+    Chose Ireland and clicked the button again. Got a holiday for August and a message that there are no hols in Septemebr as expected.
+    Chose United Kingdom and clicked get holidays. Ireland info removed and received 2 messages in table that there were no hols for Aug and Sept as expected.  
+    Chose Japan and everything worked as expected.
+    Refreshed page and commented out console logs. Ran Ireland again successfully.
+    Deleted console.logs, chose Japan and ran successfully.
+    Table reads ok on mobile and larger screens.
+    Clicked "get all Polygon Funds Button". 
+    Info returned as expected however in some cases September data came back before August and therefore appears before it on the table.
+    No of funds showing correctly.
+    Refreshed page to see console.logs. Commented them out. Refreshed page and ran "get all Polygon Funds again." Ran correctly. Deleted Console Logs.
+    ran "get all Polygon Funds again." Ran correctly.
+ .  Turn of Year.
+    Change currentMonth fro userSystemMonth +1 to userSystemMonth + 4. 
+    Message in table saying no hols for August. This is because the getThisMonthsName function takes the monthnumber off the system and not my currentMonth variable. Working correctly.
+    userSystemMonth + 4 above should have been usermonth +5 to return December and Jan hols. Refreshed page. Clicked button, ran for Ireland and got December 2020 and Jan 2021 holidays as expected.
+    Refreshed gain and ran UK, results as expected.
+    Ran the "get all Polygon Funds button". Holidays retruend for Dec and Jan as expected. Message about no hols in Aug for Japan but again this is reading directly from the system so will be ok when November comes.
+    Change currentMonth userSystemMonth -7 to test Jan and Feb. Ran the "get all Polygon Funds button".
+    Holidays for the whole year returned which was not expected. Ater researching userSystemMonth -7 = 0 above is incorrect. Inputting 0 to the API call returns hols for the whole year.
+    Updated to userSystemMonth - 6 and hols for Jan and Feb were returned as expected. Message references no hols in September but it's reading direct from the sysytem so working as expected.
+    Changed it back to userSystemMonth+5 to remove console.logs. Refreshed and ran both buttons again. Results as expected.
     
 ## Deployment
 

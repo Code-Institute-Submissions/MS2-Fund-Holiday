@@ -19,7 +19,7 @@ let userSystemMonth = userSystemDate.getMonth();
 //
 
 // required to convert system dates to dates for api calls. August returns 7 from the system, 8 is required to request August holidays from api.
-let currentMonth = userSystemMonth + 1;
+let currentMonth = userSystemMonth + 5;
 let nextYear = userSystemYear + 1;
 let nextMonth;
 
@@ -107,12 +107,11 @@ if (typeof(watchlistArray[0]) != "string") {
 // run through the returned array and add each holiday to the table.
     for (let z = 0; z < watchlistArray.length; z++) {
         $.getJSON(baseURL + apk + countryFormat + watchlistArray[z] + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
-            console.log(data);
+            
             //q is a counter variable. If there is a holiday it will increment by 1. If it's zero after the api call user will get a message that there are no holidays for the month in the table.
             let q = 0;
 
             for (let i in data.response.holidays) {
-                console.log(data.response.holidays[i]);
                 let name = data.response.holidays[i].country.name;
                 let date = data.response.holidays[i].date.iso;
                 let description = data.response.holidays[i].name;
@@ -213,7 +212,7 @@ if (typeof(watchlistArray[0]) != "string") {
 
                 q = 0;
                 for (let i in data.response.holidays) {
-                    console.log(data.response.holidays[i]);
+                    
                     let name = data.response.holidays[i].country.name;
                     let date = data.response.holidays[i].date.iso;
                     let description = data.response.holidays[i].name;
@@ -331,12 +330,10 @@ function polygonFunction() {
     for (let z = 0; z < polygonFunds.length; z++) {
 
         $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + userSystemYear + monthFormat + currentMonth + type, function (data) {
-            console.log(data);
             //q is a counter variable. If there is a holiday it will increment by 1. If it's zero after the api call user will get a message that there are no holidays for the month in the table.
             let q = 0;
 
             for (let i in data.response.holidays) {
-                console.log(data.response.holidays[i]);
                 let name = data.response.holidays[i].country.name;
                 let date = data.response.holidays[i].date.iso;
                 let description = data.response.holidays[i].name;
@@ -385,7 +382,6 @@ function polygonFunction() {
             $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + userSystemYear + monthFormat + nextMonth + type, function (data) {
                 q = 0;
                 for (let i in data.response.holidays) {
-                    console.log(data.response.holidays[i]);
                     let name = data.response.holidays[i].country.name;
                     let date = data.response.holidays[i].date.iso;
                     let description = data.response.holidays[i].name;
@@ -434,7 +430,6 @@ function polygonFunction() {
             $.getJSON(baseURL + apk + countryFormat + polygonFunds[z] + yearFormat + nextYear + monthFormat + nextMonth + type, function (data) {
                 q = 0;
                 for (let i in data.response.holidays) {
-                    console.log(data.response.holidays[i]);
                     let name = data.response.holidays[i].country.name;
                     let date = data.response.holidays[i].date.iso;
                     let description = data.response.holidays[i].name;
