@@ -311,13 +311,13 @@ let usFunds = ["US Equity", " DEF Bio Technology", " Argideen Blue Chip", " XYZ 
 
 let ukFunds = [" UK Equity", " UK Bio Technology", " UK Blue Chip"];
 
-let japanFunds = [" Japan Equity", " Japan Bio Technology", " ABC Blue Chip", " ABC Small Cap", " LU Eur Equity", " LU ABC Bio Technology", " LU ABC Blue Chip", " LU ABC Small Cap"];
+let japanFunds = [" LU Eur Equity", " LU ABC Bio Technology", " LU ABC Blue Chip", " LU ABC Small Cap"];
 
     document.getElementById("irishFund").innerHTML = "Irish funds are: " + irishFunds.toString();
       document.getElementById("japanFund").innerHTML = "Japanese funds are: " + japanFunds.toString();
       document.getElementById("usFund").innerHTML = "US funds are: " + usFunds.toString();
       document.getElementById("ukFund").innerHTML = "UK funds are: " + ukFunds.toString();
-       document.getElementById("msgFund").innerHTML = "To amend the fund list please contact gerd113@PolygonFA,com."
+       document.getElementById("msgFund").innerHTML = "To amend the fund list please contact gerd113@PolygonFA.com."
  
 
 //Polygon Funds Group Function with fixed arrays.
