@@ -310,11 +310,21 @@
 						<a>
 							<button class="btn btn-primary" onclick="polygonFunction()">Get all Polygon Funds</button>
 						</a>
+                        <a>
+							<button class="btn btn-primary" onclick="ireland()">Irish Funds</button>
+						</a>
+                        
 					</div>
 				</div>
 			</div>
 		</div>
 	</div>
+<!-- Fund Lists -->
+<p id="msgFund"></p>   
+<p id="irishFund"></p>
+<p id="ukFund"></p>
+<p id="usFund"></p>
+<p id="japanFund"></p>
 
 	<!-- Bootstrap Table -->
 	<table class="table table-borderless thead-dark table-sm">
@@ -329,9 +339,11 @@
 		<tbody id="tdata">
 
 		</tbody>
+
+        
 	</table>
 
-
+    
 
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
 	<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.1/umd/popper.min.js"></script>
