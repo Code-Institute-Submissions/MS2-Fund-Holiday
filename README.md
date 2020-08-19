@@ -33,7 +33,8 @@ I have to disregard some days like religious holidays that show up in various co
 As a user I would like to get the National public holidays per country per year at the click of button.
 
 ## Testing
-Added and removed a colour to body background and console.log to ensure CSS and JS files linked correctly.
+Added and removed a colour to body background and console.log to ensure CSS and JS files linked correctly.-
+
 Added variables to read the users current date and time. 3 Console.logs() processed. 
     console.log(userSystemDate); returned - Sat Aug 15 2020 17:21:04 GMT+0100 (Irish Standard Time) - as expected.
     console.log(userSystemYear); returned - 2020 as expected.
