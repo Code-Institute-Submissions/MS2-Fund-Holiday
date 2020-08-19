@@ -147,8 +147,9 @@ As a user I would like to get the National public holidays per country per year 
     Refreshed page. Chose 2022. Got the message to choose country and year again.
     Chose Malta, clicked button and gt expected results.
     Removed console.logs. Ran Nigeria 2027 and got expected results.
-
-
+. Added fund lists on larger scrrens. Ran through all buttons again, Returning as expected.
+. No errors found on CSS W3C CSS Validator.
+    HTML validator showed 2 issues with buttons between a tags. Amended.
     
 ## Deployment
 
