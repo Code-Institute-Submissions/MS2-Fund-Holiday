@@ -7,7 +7,11 @@ The aim of this site is to streamline the processes around fund holidays which c
 This site will reduce the time spent validating holidays throughout the year from hours to minutes when holidays occur. 
 Please see user stories below for specific issues.
 
+## UX
 
+
+
+* [Wireframes](https://github.com/gerd113/MS2-FUND-HOLIDAY/tree/master/assets/wireframes)
 
 ### User Stories
 
@@ -23,7 +27,7 @@ I need to ensure that all funds that follow particular holidays are tracked, tha
 Currently the information is accquired from Google in the outsourced location and the Home Location then verifies it to google country by country and fund by fund every holiday.
 
 ###  Head of FA
-As a user I would like a quick and easy way to validate Japanes holidays as I have given assurances to a Japanese client that we will stop forgetting their holidays.
+As a user I would like a quick and easy way to validate Japanese holidays as I have given assurances to a Japanese client that we will stop forgetting their holidays.
 This also causes internal issues with different department like security pricing who lose significant time when things that should price automaticaaly don't and when things price that shouldn't have.
 I would like to see my teams improve their processes around holidays, move away from manually searching to eradicate unnecessary, preventable issues and spend the saved time on more value added activities.
 
@@ -31,6 +35,32 @@ I would like to see my teams improve their processes around holidays, move away 
 Part of my job is to agree annual fund calendars for the upcoming year with clients. To achieve it I use a combination of Bloomberg, google and the relevant government websites to arrive at the official public holidays.
 I have to disregard some days like religious holidays that show up in various countries so this can take significant time.
 As a user I would like to get the National public holidays per country per year at the click of button.
+
+## Features
+
+
+*	From the landing page on mobile users can see holidays for any country or group of countries they like by selecting from the list.
+*   On larger screens there is a button to run all the countries we have funds for at once. 
+*   The funds we have are also listed and Descriptions of the holidays are also available on larger screens for example "New Years Day".
+*   Holidays of immediate concern are on this page, showing the current and next months. 
+*	Annual Calendars are available on the annual calendar page, The user chosses the country and year required and clicks a button.
+
+
+## Technologies Used
+
+* HTML 
+* CSS 
+* Javascript
+* Jquery
+* [Bootstrap](https://getbootstrap.com/) - for responsiveness, raw code taken for popovers, tables, progress bars, images etc and amended as necessary.
+* [GIT](https://git-scm.com/) - Version Control
+* [GitHub](https://github.com/) - to host the repositories for this project and the live 
+    website preview
+* [W3 Schools](https://validator.w3.org/) - to validate CSS and HTML. Also used for learning and research as detailed in the code.
+* Eventyret's Bootstrap 4 extension `!bscdn` used adding jquery and popper to the above.
+* Font Awesome used for Icons.
+* YouTube.com used for learning about API's. Specific videops linked in the Javascript code.
+* StackOverflow.com aslso referenced at various stages, specific links in the Javascript code.
 
 ## Testing
 Added and removed a colour to body background and console.log to ensure CSS and JS files linked correctly.
@@ -281,8 +311,34 @@ To deploy this page to GitHub Pages from it's Github repository the following st
 5. Scroll back down to the **GitHub Pages** section to retrieve the link to the deployed website.
 6. Your site is ready to be published at https://gerd113.github.io/MS2-Fund-Holiday/.
 
- 
+## Cloning a repository to GitHub Desktop
+1. On GitHub, navigate to the main page of the repository.
+2. Above the list of files, click &#X2913 Code.     
+3. Click  Open with GitHub Desktop to clone and open the repository with GitHub Desktop.
+4. Follow the prompts in GitHub Desktop to complete the clone.
+
+## Conclusion
+
+The site is intended to be an intranet site and will be useful for a small FA group.
+The look of the site will need to be updated as unfortunately I ran out of time while concentrating on the logic.
+The site would be immediately useful however in my work pending the updates. I see the following updates in logic and functionality to be made;
+
+  * It was my intention to use Local Storage to allow the users update the lists of funds but I ran out of time.
+  * The site is useful as is however I see it being hooked up to a databse for company wide use with contact emails and names of funds, holidays followed etc. 
+  * Sometimes the following months holidays come back before the current months and can look awkward especially when running multiple countries. 
+  I tried Datatables.net to try and figure out a way to sort the table but Chrome was blocking it due to an issue with cloudflare so I decided to move on and add sorting capability later. 
 
 
+
+## Credits
+
+Inspiration for the project came from many years of experience in the Fund Industy and issues caused by missing holidays in many companies and countries.
+
+I referenced You Tube and Stack Overflow as referenced in the code. Course materials and W3scools were also utilised as well as the Slack community.
+
+
+## Disclaimer
+
+The site is for educational purposes only. All fund manes and companies are fictional and any resemblance to any real entities are unintentional.
 
 
